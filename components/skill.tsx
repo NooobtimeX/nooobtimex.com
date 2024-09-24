@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const iconStyle = { width: "3rem", height: "3rem" };
 
@@ -10,13 +11,7 @@ const skills = [
       { src: "/logo/nuxtjs.png", name: "Nuxt.js" },
       { src: "/logo/react.ico", name: "React" },
       { src: "/logo/vuejs.svg", name: "Vue.js" },
-    ],
-  },
-  {
-    category: "CSS Framework",
-    skills: [
       { src: "/logo/tailwindcss.png", name: "Tailwind CSS" },
-      { src: "/logo/daisyui.ico", name: "DaisyUI" },
       { src: "/logo/bootstrap.ico", name: "Bootstrap" },
     ],
   },
@@ -30,19 +25,19 @@ const skills = [
     ],
   },
   {
+    category: "Deployment",
+    skills: [
+      { src: "/logo/vercel.png", name: "Vercel" },
+      { src: "/logo/firebase.png", name: "Firebase" },
+      { src: "/logo/supabase.jpg", name: "supabase" },
+    ],
+  },
+  {
     category: "Programming Language",
     skills: [
       { src: "/logo/python.ico", name: "Python" },
       { src: "/logo/javascript.png", name: "Javascript" },
       { src: "/logo/typescript.ico", name: "Typescript" },
-    ],
-  },
-  {
-    category: "Ai Skill",
-    skills: [
-      { src: "/logo/chatgpt.png", name: "Chat GPT" },
-      { src: "/logo/copilot.png", name: "Copilot" },
-      { src: "/logo/gemini.svg", name: "Gemini" },
     ],
   },
 ];
@@ -59,13 +54,15 @@ export default function Skill() {
             {category.skills.map((skill, index) => (
               <div
                 key={index}
-                className="flex h-24 min-h-[100px] min-w-[150px] transform flex-col items-center justify-center rounded-lg p-4 shadow-lg transition-transform hover:scale-110"
+                className="flex h-24 min-h-[100px] min-w-[150px] transform flex-col items-center justify-center rounded-lg p-4 shadow-lg shadow-gray-800 transition-transform hover:scale-110"
               >
-                <img
+                <Image
                   src={skill.src}
                   alt={skill.name}
                   style={iconStyle}
                   className="rounded-lg"
+                  width={24}
+                  height={24}
                 />
                 <span className="font mt-2 text-lg">{skill.name}</span>
               </div>

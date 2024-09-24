@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 var ageCalculator = require("age-calculator");
 let { AgeFromDate } = ageCalculator;
 
@@ -9,14 +10,16 @@ export default function HeroSection() {
   let bachelor = "Computer Science";
 
   return (
-    <div className="hero rounded-xl bg-gray-800 bg-gradient-to-r text-white">
+    <div className="hero rounded-xl text-white">
       <div className="hero-content flex flex-col items-center justify-center p-8 lg:flex-row">
         <div className="avatar online mb-6 flex items-center justify-center lg:mb-0">
           <div className="h-40 w-40 overflow-hidden rounded-full shadow-lg">
-            <img
+            <Image
               src="/people/NooobtimeX.webp"
               alt="Avatar"
               className="h-full w-full object-cover"
+              width={160}
+              height={160}
             />
           </div>
         </div>

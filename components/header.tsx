@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { IoGameController } from "react-icons/io5";
-
+import Image from "next/image";
 const navigation = [
   { href: "/", name: "About me" },
   { href: "/#skill", name: "Skill" },
@@ -40,12 +39,18 @@ export default function Header() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
               <a href="/">
-                <img
+                <Image
                   src="/favicon.ico"
-                  className="w-9 rounded-full"
+                  className="rounded-full"
                   alt="HoYoSmash"
+                  width={36}
+                  height={36}
                 />
               </a>
+            </div>
+            <div className="flex items-center pl-2">
+              {/* Added this div to center the text */}
+              <h1 className="text-base">Portfolio</h1>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -56,7 +61,7 @@ export default function Header() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-800"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700"
                     >
                       {item.name}
                     </a>
@@ -74,7 +79,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300"
+                className="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700"
               >
                 {item.name}
               </a>
