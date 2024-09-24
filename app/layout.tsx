@@ -29,6 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-5PVXPTWP" />
+      <head>
+        <link rel="canonical" href="https://nooobtimex.me/" />
+      </head>
       <body className={inter.className}>
         <Header />
         <main className="mx-auto my-2 mb-20 max-w-7xl">{children}</main>
