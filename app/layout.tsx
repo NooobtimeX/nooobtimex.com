@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
+import ClientLayout from "@/components/ClientLayout"; // Import the client layout
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +19,7 @@ export const metadata: Metadata = {
     google: "KiAn5R5UAuZgmwSS_KpMOO2FIRmt-39QIKrHKXrAOL8",
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,14 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-5PVXPTWP" />
       <head>
         <link rel="canonical" href="https://nooobtimex.me/" />
       </head>
       <body className={inter.className}>
-        <Header />
-        <main className="mx-auto my-2 mb-20 max-w-7xl">{children}</main>
-        <Footer />
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

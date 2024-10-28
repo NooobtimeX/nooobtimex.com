@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-const iconStyle = { width: "3rem", height: "3rem" };
-
 const skills = [
   {
     category: "Frontend",
@@ -12,7 +10,6 @@ const skills = [
       { src: "/logo/react.ico", name: "React" },
       { src: "/logo/vuejs.svg", name: "Vue.js" },
       { src: "/logo/tailwindcss.png", name: "Tailwind CSS" },
-      { src: "/logo/bootstrap.ico", name: "Bootstrap" },
     ],
   },
   {
@@ -44,27 +41,31 @@ const skills = [
 
 export default function Skill() {
   return (
-    <div className="flex flex-col items-center p-4" id="skill">
+    <div
+      className="flex flex-col items-center bg-gray-900 p-8 text-white"
+      id="skill"
+    >
       {skills.map((category) => (
         <React.Fragment key={category.category}>
-          <h2 className="mb-6 text-2xl font-bold">
+          <h2 className="mb-6 text-3xl font-bold text-indigo-400">
             {category.category} Skills
           </h2>
-          <div className="mb-8 flex flex-wrap justify-center gap-6">
+          <div className="mb-8 flex flex-wrap justify-center gap-4">
             {category.skills.map((skill, index) => (
               <div
                 key={index}
-                className="flex h-24 min-h-[100px] min-w-[150px] transform flex-col items-center justify-center rounded-lg p-4 shadow-lg shadow-gray-800 transition-transform hover:scale-110"
+                className="flex h-28 w-32 transform flex-col items-center justify-center rounded-lg bg-gray-800 p-4 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-indigo-500"
               >
                 <Image
                   src={skill.src}
                   alt={skill.name}
-                  style={iconStyle}
+                  width={40}
+                  height={40}
                   className="rounded-lg"
-                  width={24}
-                  height={24}
                 />
-                <span className="font mt-2 text-lg">{skill.name}</span>
+                <span className="mt-2 text-sm font-semibold text-gray-200">
+                  {skill.name}
+                </span>
               </div>
             ))}
           </div>
