@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Project() {
   const items = [
     {
@@ -61,7 +59,7 @@ export default function Project() {
           >
             <div className="relative">
               <a href={item.href} target="_blank" rel="noopener noreferrer">
-                <Image
+                <img
                   src={item.imgSrc}
                   alt={item.name}
                   className="h-48 w-full rounded-t-xl object-cover"
@@ -85,7 +83,7 @@ export default function Project() {
                     title={coWorker.name}
                     className="inline-block"
                   >
-                    <Image
+                    <img
                       src={coWorker.imgSrc}
                       alt={coWorker.name}
                       className="h-8 w-8 rounded-full border border-indigo-400"

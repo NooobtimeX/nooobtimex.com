@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const skills = [
   {
@@ -56,7 +55,7 @@ export default function Skill() {
                 key={index}
                 className="flex h-28 w-32 transform flex-col items-center justify-center rounded-lg bg-gray-800 p-4 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-indigo-500"
               >
-                <Image
+                <img
                   src={skill.src}
                   alt={skill.name}
                   width={40}

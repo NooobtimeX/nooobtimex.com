@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 var ageCalculator = require("age-calculator");
 let { AgeFromDate } = ageCalculator;
 
@@ -15,7 +14,7 @@ export default function Home() {
         <div className="hero-content flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-12">
           <div className="avatar online mb-6 flex items-center justify-center lg:mb-0">
             <div className="h-40 w-40 overflow-hidden rounded-full shadow-lg">
-              <Image
+              <img
                 src="/people/NooobtimeX.webp"
                 alt="Avatar"
                 className="h-full w-full object-cover"
