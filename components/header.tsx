@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation"; // For App Router
+import Link from "next/link";
 
 const navigation = [
   { href: "/", name: "About Me" },
@@ -36,7 +37,7 @@ export default function Header() {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <img
                 src="/favicon.ico"
                 alt="HoYoSmash"
@@ -47,7 +48,7 @@ export default function Header() {
               <span className="ml-3 text-lg font-semibold text-indigo-400">
                 Portfolio
               </span>
-            </a>
+            </Link>
           </div>
           <div className="hidden sm:flex sm:space-x-4">
             {navigation.map((item) => (
