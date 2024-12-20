@@ -8,10 +8,24 @@ export default function Project() {
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   const coWorkers = [
-    { name: "NooobtimeX", id: "NooobtimeX" },
-    { name: "Tateung", id: "Tateung" },
-    { name: "RUAMSUK PLATING Team", id: "RUAMSUK PLATING Team" },
-    // Add more co-workers as necessary
+    {
+      name: "NooobtimeX",
+      id: "NooobtimeX",
+      link: "https://github.com/NooobtimeX",
+      imgSrc: "/people/NooobtimeX.webp",
+    },
+    {
+      name: "Tateung",
+      id: "Tateung",
+      link: "https://github.com/Tateung",
+      imgSrc: "/people/Tateung.webp",
+    },
+    {
+      name: "RUAMSUK PLATING Team",
+      id: "RUAMSUK PLATING Team",
+      link: "https://www.rs-trophy.com",
+      imgSrc: "/people/rs trophy.webp",
+    },
   ];
 
   const skills = [
@@ -24,143 +38,76 @@ export default function Project() {
     { name: "WordPress", id: "WordPress" },
     { name: "WooCommerce", id: "WooCommerce" },
     { name: "SEO", id: "SEO" },
-    // Add more skills as necessary
   ];
+
   const items = [
     {
       href: "https://github.com/NooobtimeX/QR-Food",
       imgSrc: "/project/Porfolio.png",
       name: "Porfolio",
-      team: [
-        {
-          name: "NooobtimeX",
-          link: "https://github.com/NooobtimeX",
-          imgSrc: "/people/NooobtimeX.webp",
-        },
-      ],
+      team: coWorkers.filter((cw) => ["NooobtimeX"].includes(cw.id)),
       skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
     },
     {
       href: "https://github.com/NooobtimeX/QR-Food",
       imgSrc: "/project/QRCODE.png",
       name: "QR FOOD",
-      team: [
-        {
-          name: "NooobtimeX",
-          link: "https://github.com/NooobtimeX",
-          imgSrc: "/people/NooobtimeX.webp",
-        },
-        {
-          name: "Tateung",
-          link: "https://github.com/Tateung",
-          imgSrc: "/people/Tateung.webp",
-        },
-      ],
+      team: coWorkers.filter((cw) => ["NooobtimeX", "Tateung"].includes(cw.id)),
       skills: ["NUXT JS", "Vercel", "Supabase", "Tailwind CSS"],
     },
     {
       href: "https://combomaker.net/",
       imgSrc: "/project/combomaker.png",
       name: "combomaker.net",
-      team: [
-        {
-          name: "NooobtimeX",
-          link: "https://github.com/NooobtimeX",
-          imgSrc: "/people/NooobtimeX.webp",
-        },
-      ],
+      team: coWorkers.filter((cw) => ["NooobtimeX"].includes(cw.id)),
       skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
     },
     {
       href: "https://hoyosmash.com/",
       imgSrc: "/project/hoyosmash.png",
       name: "hoyosmash.com",
-      team: [
-        {
-          name: "NooobtimeX",
-          link: "https://github.com/NooobtimeX",
-          imgSrc: "/people/NooobtimeX.webp",
-        },
-      ],
+      team: coWorkers.filter((cw) => ["NooobtimeX"].includes(cw.id)),
       skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
     },
     {
       href: "https://www.rs-trophy.com",
       imgSrc: "/project/rstrophy.png",
       name: "rs-trophy.com",
-      team: [
-        {
-          name: "NooobtimeX",
-          link: "https://github.com/NooobtimeX",
-          imgSrc: "/people/NooobtimeX.webp",
-        },
-        {
-          name: "RUAMSUK PLATING Team",
-          link: "https://www.rs-trophy.com",
-          imgSrc: "/people/rs trophy.webp",
-        },
-      ],
+      team: coWorkers.filter((cw) =>
+        ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
+      ),
       skills: ["WordPress", "WooCommerce", "SEO"],
     },
     {
       href: "https://www.rs-medal.com",
       imgSrc: "/project/rsmedal.png",
       name: "rs-medal.com",
-      team: [
-        {
-          name: "NooobtimeX",
-          link: "https://github.com/NooobtimeX",
-          imgSrc: "/people/NooobtimeX.webp",
-        },
-        {
-          name: "RUAMSUK PLATING Team",
-          link: "https://www.rs-trophy.com",
-          imgSrc: "/people/rs trophy.webp",
-        },
-      ],
+      team: coWorkers.filter((cw) =>
+        ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
+      ),
       skills: ["WordPress", "WooCommerce", "SEO"],
     },
     {
       href: "https://www.rs-award.com",
       imgSrc: "/project/rstrophy.png",
       name: "rs-award.com",
-      team: [
-        {
-          name: "NooobtimeX",
-          link: "https://github.com/NooobtimeX",
-          imgSrc: "/people/NooobtimeX.webp",
-        },
-        {
-          name: "RUAMSUK PLATING Team",
-          link: "https://www.rs-trophy.com",
-          imgSrc: "/people/rs trophy.webp",
-        },
-      ],
+      team: coWorkers.filter((cw) =>
+        ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
+      ),
       skills: ["WordPress", "WooCommerce", "SEO"],
     },
     {
       href: "https://www.rs-ribbon.com",
       imgSrc: "/project/rsribbon.png",
       name: "rs-ribbon.com",
-      team: [
-        {
-          name: "NooobtimeX",
-          link: "https://github.com/NooobtimeX",
-          imgSrc: "/people/NooobtimeX.webp",
-        },
-        {
-          name: "RUAMSUK PLATING Team",
-          link: "https://www.rs-trophy.com",
-          imgSrc: "/people/rs trophy.webp",
-        },
-      ],
+      team: coWorkers.filter((cw) =>
+        ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
+      ),
       skills: ["WordPress", "WooCommerce", "SEO"],
     },
   ];
 
-  const toggleFilter = () => {
-    setIsFilterOpen(!isFilterOpen);
-  };
+  const toggleFilter = () => setIsFilterOpen((prev) => !prev);
 
   const handleCoWorkerChange = (id: string) => {
     setSelectedCoWorkers((prev) =>
@@ -176,7 +123,6 @@ export default function Project() {
     );
   };
 
-  // Filter items based on selected co-workers and skills
   const filteredItems = items.filter((item) => {
     const coWorkersMatch =
       selectedCoWorkers.length === 0 ||
@@ -188,6 +134,7 @@ export default function Project() {
 
     return coWorkersMatch && skillsMatch;
   });
+
   return (
     <div className="m-4 rounded-lg bg-gray-900 p-8 text-white" id="project">
       <h2 className="mb-10 text-center text-4xl font-bold text-indigo-400">
@@ -196,16 +143,16 @@ export default function Project() {
       <div className="flex items-center justify-center">
         <button
           onClick={toggleFilter}
-          className="-mt-8 mb-4 hidden aspect-square rounded-full bg-indigo-600 p-2 text-white hover:bg-indigo-700 md:inline-block"
+          className="-mt-8 mb-4 hidden aspect-square rounded-full bg-indigo-600 p-2 hover:bg-indigo-700 md:inline-block"
         >
-          <img src="/icon/filter.png" />
+          <img src="/icon/filter.png" alt="Filter" />
         </button>
       </div>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {filteredItems.map((item) => (
           <div
             key={item.name}
-            className="w-full max-w-sm transform overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
+            className="w-full transform overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="relative">
               <a href={item.href} target="_blank" rel="noopener noreferrer">
@@ -213,40 +160,32 @@ export default function Project() {
                   src={item.imgSrc}
                   alt={item.name}
                   className="h-48 w-full rounded-t-xl object-cover"
-                  width={300}
-                  height={200}
                 />
               </a>
+              <div className="absolute bottom-1 right-1 text-sm text-white">
+                <div className="flex items-center justify-center space-x-1">
+                  {item.team.map((coWorker) => (
+                    <a
+                      href={coWorker.link}
+                      key={coWorker.id}
+                      title={coWorker.name}
+                      className="inline-block rounded bg-gray-900 bg-opacity-75 p-1"
+                    >
+                      <img
+                        src={coWorker.imgSrc}
+                        alt={coWorker.name}
+                        className="h-8 w-8 rounded-full border border-indigo-400"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
             <div className="p-2">
               <h3 className="text-center text-2xl font-semibold text-indigo-300">
                 {item.name}
               </h3>
-              <h4 className="text-md text-center font-semibold text-indigo-200">
-                Co-workers
-              </h4>
-              <div className="flex items-center justify-center space-x-3">
-                {item.team.map((coWorker) => (
-                  <a
-                    href={coWorker.link}
-                    key={coWorker.name}
-                    title={coWorker.name}
-                    className="inline-block"
-                  >
-                    <img
-                      src={coWorker.imgSrc}
-                      alt={coWorker.name}
-                      className="h-8 w-8 rounded-full border border-indigo-400"
-                      width={40}
-                      height={40}
-                    />
-                  </a>
-                ))}
-              </div>
-              <h4 className="text-md text-center font-semibold text-indigo-200">
-                Skills
-              </h4>
-              <div className="mt-1 text-center text-sm text-gray-400">
+              <div className="text-center text-sm text-gray-400">
                 {item.skills.join(", ")}
               </div>
             </div>
@@ -255,9 +194,9 @@ export default function Project() {
       </div>
       <button
         onClick={toggleFilter}
-        className="fixed bottom-4 right-4 aspect-square rounded-full bg-indigo-600 p-2 text-white shadow-lg hover:bg-indigo-700 md:hidden"
+        className="fixed bottom-4 right-4 aspect-square rounded-full bg-indigo-600 p-2 hover:bg-indigo-700 md:hidden"
       >
-        <img src="/icon/filter.png" />
+        <img src="/icon/filter.png" alt="Filter" />
       </button>
 
       {isFilterOpen && (
@@ -305,14 +244,14 @@ export default function Project() {
                   ))}
                 </div>
               </div>
-              <div className="mt-4 text-center">
-                <button
-                  onClick={toggleFilter}
-                  className="rounded-md bg-indigo-600 px-6 py-2 text-white hover:bg-indigo-700"
-                >
-                  Close
-                </button>
-              </div>
+            </div>
+            <div className="mt-6 flex justify-center space-x-4">
+              <button
+                className="rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
+                onClick={toggleFilter}
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>
