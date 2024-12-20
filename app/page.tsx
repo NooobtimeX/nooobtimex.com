@@ -53,8 +53,7 @@ export default function Home() {
               {" "}
               modern JavaScript frameworks
             </span>
-            , I build robust and scalable web applications using the latest
-            technologies.
+            , I build robust web applications using the latest technologies.
           </p>
         </div>
       </section>
