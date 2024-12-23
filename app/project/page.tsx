@@ -37,7 +37,6 @@ export default function Project() {
     { name: "Supabase", id: "Supabase" },
     { name: "WordPress", id: "WordPress" },
     { name: "WooCommerce", id: "WooCommerce" },
-    { name: "SEO", id: "SEO" },
   ];
 
   const items = [
@@ -76,7 +75,7 @@ export default function Project() {
       team: coWorkers.filter((cw) =>
         ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
       ),
-      skills: ["WordPress", "WooCommerce", "SEO"],
+      skills: ["WordPress", "WooCommerce"],
     },
     {
       href: "https://www.rs-medal.com",
@@ -85,16 +84,16 @@ export default function Project() {
       team: coWorkers.filter((cw) =>
         ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
       ),
-      skills: ["WordPress", "WooCommerce", "SEO"],
+      skills: ["WordPress", "WooCommerce"],
     },
     {
       href: "https://www.rs-award.com",
-      imgSrc: "/project/rstrophy.png",
+      imgSrc: "/project/rsaward.png",
       name: "rs-award.com",
       team: coWorkers.filter((cw) =>
         ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
       ),
-      skills: ["WordPress", "WooCommerce", "SEO"],
+      skills: ["WordPress", "WooCommerce"],
     },
     {
       href: "https://www.rs-ribbon.com",
@@ -103,7 +102,7 @@ export default function Project() {
       team: coWorkers.filter((cw) =>
         ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
       ),
-      skills: ["WordPress", "WooCommerce", "SEO"],
+      skills: ["WordPress", "WooCommerce"],
     },
   ];
 
@@ -136,8 +135,8 @@ export default function Project() {
   });
 
   return (
-    <div className="m-4 rounded-lg bg-gray-900 p-8 text-white" id="project">
-      <h2 className="mb-10 text-center text-4xl font-bold text-indigo-400">
+    <div className="rounded-lg bg-gray-900 p-4 text-white" id="project">
+      <h2 className="mb-4 text-center text-4xl font-bold text-indigo-400">
         Projects
       </h2>
       <div className="flex items-center justify-center">
@@ -148,11 +147,11 @@ export default function Project() {
           <img src="/icon/filter.png" alt="Filter" />
         </button>
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="flex flex-wrap justify-center gap-8">
         {filteredItems.map((item) => (
           <div
             key={item.name}
-            className="w-full transform overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="w-full max-w-sm transform overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
           >
             <div className="relative">
               <a href={item.href} target="_blank" rel="noopener noreferrer">
@@ -174,6 +173,7 @@ export default function Project() {
                       <img
                         src={coWorker.imgSrc}
                         alt={coWorker.name}
+                        title={coWorker.name}
                         className="h-8 w-8 rounded-full border border-indigo-400"
                       />
                     </a>

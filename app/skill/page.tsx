@@ -17,6 +17,7 @@ const skills = [
       { src: "/logo/prisma.png", name: "Prisma" },
       { src: "/logo/sqlite.png", name: "SQLite" },
       { src: "/logo/postgresql.ico", name: "PostgreSQL" },
+      { src: "/logo/mysql.svg", name: "MySQL" },
       { src: "/logo/nodejs.png", name: "Node.js" },
     ],
   },
@@ -41,25 +42,25 @@ const skills = [
 export default function Skill() {
   return (
     <div
-      className="flex flex-col items-center bg-gray-900 p-8 text-white"
+      className="flex flex-col items-center bg-gray-900 p-4 text-white"
       id="skill"
     >
       {skills.map((category) => (
         <React.Fragment key={category.category}>
-          <h2 className="mb-6 text-3xl font-bold text-indigo-400">
+          <h2 className="mb-2 text-3xl font-bold text-indigo-400">
             {category.category} Skills
           </h2>
-          <div className="mb-8 flex flex-wrap justify-center gap-4">
+          <div className="mb-6 flex flex-wrap justify-center gap-4">
             {category.skills.map((skill, index) => (
               <div
                 key={index}
-                className="flex h-28 w-32 transform flex-col items-center justify-center rounded-lg bg-gray-800 p-4 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-indigo-500"
+                className="flex h-28 w-28 transform flex-col items-center justify-center rounded-lg bg-gray-800 p-2 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-indigo-500"
               >
                 <img
                   src={skill.src}
                   alt={skill.name}
-                  width={40}
-                  height={40}
+                  width={50}
+                  height={50}
                   className="rounded-lg"
                 />
                 <span className="mt-2 text-sm font-semibold text-gray-200">
