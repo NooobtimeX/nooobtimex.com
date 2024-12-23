@@ -6,19 +6,22 @@ export default function Project() {
   const items = [
     {
       href: "https://github.com/NooobtimeX/QR-Food",
-      imgSrc: "/project/QRCODE.png",
+      imgSrc:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2FQRCODE.png?alt=media&token=916e4c43-724e-4e30-86c0-155ee8093da5",
       name: "QR FOOD",
       skills: ["NUXT JS", "Vercel", "Supabase", "Tailwind CSS"],
     },
     {
       href: "https://combomaker.net/",
-      imgSrc: "/project/combomaker.png",
+      imgSrc:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Fcombomaker.png?alt=media&token=eb2c155a-5f69-4d92-9e2a-a84fa8f5af13",
       name: "combomaker.net",
       skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
     },
     {
       href: "https://hoyosmash.com/",
-      imgSrc: "/project/hoyosmash.png",
+      imgSrc:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Fhoyosmash.png?alt=media&token=b38f2ff5-c441-4e3b-866a-a4ab32b6b903",
       name: "hoyosmash.com",
       skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
     },

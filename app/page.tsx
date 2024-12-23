@@ -17,7 +17,7 @@ export default function Home() {
           <div className="avatar online mb-6 flex items-center justify-center lg:mb-0">
             <div className="h-40 w-40 overflow-hidden rounded-full shadow-lg">
               <img
-                src="/people/NooobtimeX.webp"
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/people_profile%2FNooobtimeX.webp?alt=media&token=2449a999-5b38-4e2d-a032-f295934d94e8"
                 alt="Avatar"
                 className="h-full w-full object-cover"
                 width={160}
