@@ -9,13 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://nooobtimex.me/skill",
+      url: "https://nooobtimex.me/skills",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://nooobtimex.me/project",
+      url: "https://nooobtimex.me/projects",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

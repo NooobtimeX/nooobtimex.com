@@ -4,29 +4,7 @@ import { useState } from "react";
 
 export default function Project() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [selectedCoWorkers, setSelectedCoWorkers] = useState<string[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
-
-  const coWorkers = [
-    {
-      name: "NooobtimeX",
-      id: "NooobtimeX",
-      link: "https://github.com/NooobtimeX",
-      imgSrc: "/people/NooobtimeX.webp",
-    },
-    {
-      name: "Tateung",
-      id: "Tateung",
-      link: "https://github.com/Tateung",
-      imgSrc: "/people/Tateung.webp",
-    },
-    {
-      name: "RUAMSUK PLATING Team",
-      id: "RUAMSUK PLATING Team",
-      link: "https://www.rs-trophy.com",
-      imgSrc: "/people/rs trophy.webp",
-    },
-  ];
 
   const skills = [
     { name: "NEXT JS", id: "NEXT JS" },
@@ -41,80 +19,56 @@ export default function Project() {
 
   const items = [
     {
-      href: "https://github.com/NooobtimeX/QR-Food",
+      href: "https://nooobtimex.me/",
       imgSrc: "/project/Porfolio.png",
       name: "Porfolio",
-      team: coWorkers.filter((cw) => ["NooobtimeX"].includes(cw.id)),
       skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
     },
     {
       href: "https://github.com/NooobtimeX/QR-Food",
       imgSrc: "/project/QRCODE.png",
       name: "QR FOOD",
-      team: coWorkers.filter((cw) => ["NooobtimeX", "Tateung"].includes(cw.id)),
       skills: ["NUXT JS", "Vercel", "Supabase", "Tailwind CSS"],
     },
     {
       href: "https://combomaker.net/",
       imgSrc: "/project/combomaker.png",
       name: "combomaker.net",
-      team: coWorkers.filter((cw) => ["NooobtimeX"].includes(cw.id)),
       skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
     },
     {
       href: "https://hoyosmash.com/",
       imgSrc: "/project/hoyosmash.png",
       name: "hoyosmash.com",
-      team: coWorkers.filter((cw) => ["NooobtimeX"].includes(cw.id)),
       skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
     },
     {
       href: "https://www.rs-trophy.com",
       imgSrc: "/project/rstrophy.png",
       name: "rs-trophy.com",
-      team: coWorkers.filter((cw) =>
-        ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
-      ),
       skills: ["WordPress", "WooCommerce"],
     },
     {
       href: "https://www.rs-medal.com",
       imgSrc: "/project/rsmedal.png",
       name: "rs-medal.com",
-      team: coWorkers.filter((cw) =>
-        ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
-      ),
       skills: ["WordPress", "WooCommerce"],
     },
     {
       href: "https://www.rs-award.com",
       imgSrc: "/project/rsaward.png",
       name: "rs-award.com",
-      team: coWorkers.filter((cw) =>
-        ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
-      ),
       skills: ["WordPress", "WooCommerce"],
     },
     {
       href: "https://www.rs-ribbon.com",
       imgSrc: "/project/rsribbon.png",
       name: "rs-ribbon.com",
-      team: coWorkers.filter((cw) =>
-        ["NooobtimeX", "RUAMSUK PLATING Team"].includes(cw.id),
-      ),
       skills: ["WordPress", "WooCommerce"],
     },
   ];
 
   const toggleFilter = () => setIsFilterOpen((prev) => !prev);
-
-  const handleCoWorkerChange = (id: string) => {
-    setSelectedCoWorkers((prev) =>
-      prev.includes(id)
-        ? prev.filter((worker) => worker !== id)
-        : [...prev, id],
-    );
-  };
 
   const handleSkillChange = (id: string) => {
     setSelectedSkills((prev) =>
@@ -123,22 +77,18 @@ export default function Project() {
   };
 
   const filteredItems = items.filter((item) => {
-    const coWorkersMatch =
-      selectedCoWorkers.length === 0 ||
-      item.team.some((coWorker) => selectedCoWorkers.includes(coWorker.name));
-
     const skillsMatch =
       selectedSkills.length === 0 ||
       selectedSkills.every((skill) => item.skills.includes(skill));
 
-    return coWorkersMatch && skillsMatch;
+    return skillsMatch;
   });
 
   return (
     <div className="rounded-lg bg-gray-900 p-4 text-white" id="project">
-      <h2 className="mb-2 text-center text-4xl font-bold text-indigo-400 md:mb-10">
+      <h1 className="mb-2 text-center text-4xl font-bold text-indigo-400 md:mb-10">
         Projects
-      </h2>
+      </h1>
       <div className="flex items-center justify-center">
         <button
           onClick={toggleFilter}
@@ -161,25 +111,6 @@ export default function Project() {
                   className="h-48 w-full rounded-t-xl object-cover"
                 />
               </a>
-              <div className="absolute bottom-1 right-1 text-sm text-white">
-                <div className="flex items-center justify-center space-x-1">
-                  {item.team.map((coWorker) => (
-                    <a
-                      href={coWorker.link}
-                      key={coWorker.id}
-                      title={coWorker.name}
-                      className="inline-block rounded bg-gray-900 bg-opacity-75 p-1"
-                    >
-                      <img
-                        src={coWorker.imgSrc}
-                        alt={coWorker.name}
-                        title={coWorker.name}
-                        className="h-8 w-8 rounded-full border border-indigo-400"
-                      />
-                    </a>
-                  ))}
-                </div>
-              </div>
             </div>
             <div className="p-2">
               <h3 className="text-center text-2xl font-semibold text-indigo-300">
@@ -206,25 +137,6 @@ export default function Project() {
               Filter Projects
             </h3>
             <div className="space-y-4">
-              <div>
-                <h4 className="text-lg text-indigo-300">Co-workers</h4>
-                <div className="flex flex-wrap gap-2">
-                  {coWorkers.map((worker) => (
-                    <label
-                      key={worker.id}
-                      className="inline-flex items-center text-sm text-gray-400"
-                    >
-                      <input
-                        type="checkbox"
-                        className="mr-2"
-                        checked={selectedCoWorkers.includes(worker.id)}
-                        onChange={() => handleCoWorkerChange(worker.id)}
-                      />
-                      {worker.name}
-                    </label>
-                  ))}
-                </div>
-              </div>
               <div>
                 <h4 className="text-lg text-indigo-300">Skills</h4>
                 <div className="flex flex-wrap gap-2">

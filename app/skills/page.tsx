@@ -32,7 +32,6 @@ const skills = [
   {
     category: "Programming Language",
     skills: [
-      { src: "/logo/python.ico", name: "Python" },
       { src: "/logo/javascript.png", name: "Javascript" },
       { src: "/logo/typescript.ico", name: "Typescript" },
     ],
@@ -45,6 +44,9 @@ export default function Skill() {
       className="flex flex-col items-center bg-gray-900 p-4 text-white"
       id="skill"
     >
+      <h1 className="mb-2 text-center text-4xl font-bold text-indigo-400 md:mb-10">
+        Skills
+      </h1>
       {skills.map((category) => (
         <React.Fragment key={category.category}>
           <h2 className="mb-2 text-3xl font-bold text-indigo-400">
