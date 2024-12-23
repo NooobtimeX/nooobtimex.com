@@ -1,4 +1,6 @@
 import React from "react";
+import HighLightProjects from "@/components/home/HighLightProjects";
+import HighLightSkills from "@/components/home/HighLightSkills";
 var ageCalculator = require("age-calculator");
 let { AgeFromDate } = ageCalculator;
 
@@ -43,13 +45,20 @@ export default function Home() {
         className="container mx-auto my-8 rounded-xl bg-gray-800 p-8 text-white"
       >
         <div className="mx-auto max-w-2xl">
-          <h2 className="mb-6 text-3xl font-bold text-indigo-400">About Me</h2>
+          <h2 className="mb-6 text-3xl font-bold text-indigo-500">About Me</h2>
           <p className="text-lg leading-relaxed text-gray-300">
             I am a skilled software developer with expertise in both
-            <span className="font-semibold text-blue-500"> frontend </span> and
-            <span className="font-semibold text-blue-500"> backend </span>{" "}
+            <span className="font-semibold text-indigo-500">
+              {" "}
+              frontend{" "}
+            </span>{" "}
+            and
+            <span className="font-semibold text-indigo-500">
+              {" "}
+              backend{" "}
+            </span>{" "}
             development. Proficient in
-            <span className="font-semibold text-blue-500">
+            <span className="font-semibold text-indigo-500">
               {" "}
               modern JavaScript frameworks
             </span>
@@ -57,6 +66,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <HighLightProjects />
+      <HighLightSkills />
     </>
   );
 }
