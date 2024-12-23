@@ -136,7 +136,7 @@ export default function Project() {
 
   return (
     <div className="rounded-lg bg-gray-900 p-4 text-white" id="project">
-      <h2 className="mb-4 text-center text-4xl font-bold text-indigo-400">
+      <h2 className="mb-2 text-center text-4xl font-bold text-indigo-400 md:mb-10">
         Projects
       </h2>
       <div className="flex items-center justify-center">
@@ -151,7 +151,7 @@ export default function Project() {
         {filteredItems.map((item) => (
           <div
             key={item.name}
-            className="w-full max-w-sm transform overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
+            className="w-full max-w-md transform overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
           >
             <div className="relative">
               <a href={item.href} target="_blank" rel="noopener noreferrer">
