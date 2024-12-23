@@ -39,3 +39,4 @@ pnpm-lock.yaml
 
 # firebase
 .firebase/
+firebase-debug.log
