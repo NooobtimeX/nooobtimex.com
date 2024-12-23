@@ -18,9 +18,9 @@ export default function Skill() {
       className="flex flex-col items-center bg-gray-900 p-4 text-white"
       id="skill"
     >
-      <h1 className="mb-2 text-center text-4xl font-bold text-indigo-400 md:mb-10">
+      <h2 className="mb-2 text-center text-4xl font-bold text-indigo-400 md:mb-10">
         Highlight Skills
-      </h1>
+      </h2>
       <div className="mb-6 flex flex-wrap justify-center gap-4">
         {skills.map((skill, index) => (
           <div
