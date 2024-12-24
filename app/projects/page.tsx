@@ -93,95 +93,100 @@ export default function Project() {
   });
 
   return (
-    <div className="rounded-lg bg-neutral-900 p-4 text-white" id="project">
-      <h1 className="mb-2 text-center text-4xl font-bold text-red-600 md:mb-10">
-        Projects
-      </h1>
-      <div className="flex items-center justify-center">
+    <div>
+      <head>
+        <link rel="canonical" href="https://nooobtimex.me/projects" />
+      </head>
+      <div className="rounded-lg bg-neutral-900 p-4 text-white" id="project">
+        <h1 className="mb-2 text-center text-4xl font-bold text-red-600 md:mb-10">
+          Projects
+        </h1>
+        <div className="flex items-center justify-center">
+          <button
+            onClick={toggleFilter}
+            className="-mt-8 mb-4 hidden aspect-square rounded-full bg-red-700 p-2 hover:bg-red-700 md:inline-block"
+          >
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/icon%2Ffilter.png?alt=media&token=daac11a2-de56-46c7-aafe-5ca7260aa0a6"
+              alt="Filter"
+            />
+          </button>
+        </div>
+        <div className="flex flex-wrap justify-center gap-8">
+          {filteredItems.map((item) => (
+            <div
+              key={item.name}
+              className="w-full max-w-md transform overflow-hidden rounded-xl bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
+            >
+              <div className="relative">
+                <a href={item.href} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={item.imgSrc}
+                    alt={item.name}
+                    className="h-48 w-full rounded-t-xl object-cover"
+                  />
+                </a>
+              </div>
+              <div className="p-2">
+                <h2 className="text-center text-2xl font-semibold text-red-500">
+                  {item.name}
+                </h2>
+                <div className="text-center text-sm text-neutral-400">
+                  {item.skills.join(", ")}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
         <button
           onClick={toggleFilter}
-          className="-mt-8 mb-4 hidden aspect-square rounded-full bg-red-700 p-2 hover:bg-red-700 md:inline-block"
+          className="fixed bottom-4 right-4 aspect-square rounded-full bg-red-700 p-2 hover:bg-red-700 md:hidden"
         >
           <img
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/icon%2Ffilter.png?alt=media&token=daac11a2-de56-46c7-aafe-5ca7260aa0a6"
             alt="Filter"
           />
         </button>
-      </div>
-      <div className="flex flex-wrap justify-center gap-8">
-        {filteredItems.map((item) => (
-          <div
-            key={item.name}
-            className="w-full max-w-md transform overflow-hidden rounded-xl bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
-          >
-            <div className="relative">
-              <a href={item.href} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={item.imgSrc}
-                  alt={item.name}
-                  className="h-48 w-full rounded-t-xl object-cover"
-                />
-              </a>
-            </div>
-            <div className="p-2">
-              <h3 className="text-center text-2xl font-semibold text-red-500">
-                {item.name}
-              </h3>
-              <div className="text-center text-sm text-neutral-400">
-                {item.skills.join(", ")}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <button
-        onClick={toggleFilter}
-        className="fixed bottom-4 right-4 aspect-square rounded-full bg-red-700 p-2 hover:bg-red-700 md:hidden"
-      >
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/icon%2Ffilter.png?alt=media&token=daac11a2-de56-46c7-aafe-5ca7260aa0a6"
-          alt="Filter"
-        />
-      </button>
 
-      {isFilterOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-800 bg-opacity-50">
-          <div className="w-96 rounded-lg bg-neutral-900 p-6">
-            <h3 className="mb-4 text-center text-2xl text-red-600">
-              Filter Projects
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-lg text-red-500">Skills</h4>
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((skill) => (
-                    <label
-                      key={skill.id}
-                      className="inline-flex items-center text-sm text-neutral-400"
-                    >
-                      <input
-                        type="checkbox"
-                        className="mr-2"
-                        checked={selectedSkills.includes(skill.id)}
-                        onChange={() => handleSkillChange(skill.id)}
-                      />
-                      {skill.name}
-                    </label>
-                  ))}
+        {isFilterOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-800 bg-opacity-50">
+            <div className="w-96 rounded-lg bg-neutral-900 p-6">
+              <label className="mb-4 text-center text-2xl text-red-600">
+                Filter Projects
+              </label>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg text-red-500">Skills</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill) => (
+                      <label
+                        key={skill.id}
+                        className="inline-flex items-center text-sm text-neutral-400"
+                      >
+                        <input
+                          type="checkbox"
+                          className="mr-2"
+                          checked={selectedSkills.includes(skill.id)}
+                          onChange={() => handleSkillChange(skill.id)}
+                        />
+                        {skill.name}
+                      </label>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="mt-6 flex justify-center space-x-4">
-              <button
-                className="rounded-lg bg-red-700 px-4 py-2 text-white hover:bg-red-700"
-                onClick={toggleFilter}
-              >
-                Close
-              </button>
+              <div className="mt-6 flex justify-center space-x-4">
+                <button
+                  className="rounded-lg bg-red-700 px-4 py-2 text-white hover:bg-red-700"
+                  onClick={toggleFilter}
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

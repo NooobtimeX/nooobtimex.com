@@ -67,7 +67,7 @@ export default function Skill() {
       <div className="mt-4 flex items-center justify-center">
         <Link href="/skills">
           <button className="rounded-xl border border-red-600 px-3 py-2 text-red-600 hover:bg-red-600 hover:text-white">
-            more
+            More Skills
           </button>
         </Link>
       </div>

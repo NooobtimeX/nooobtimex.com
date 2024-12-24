@@ -27,9 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="canonical" href="https://nooobtimex.me/" />
-      </head>
       <body className={inter.className}>
         <ClientLayout>{children}</ClientLayout>
       </body>
