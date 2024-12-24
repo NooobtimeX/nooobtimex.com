@@ -93,14 +93,14 @@ export default function Project() {
   });
 
   return (
-    <div className="rounded-lg bg-gray-900 p-4 text-white" id="project">
-      <h1 className="mb-2 text-center text-4xl font-bold text-indigo-400 md:mb-10">
+    <div className="rounded-lg bg-neutral-900 p-4 text-white" id="project">
+      <h1 className="mb-2 text-center text-4xl font-bold text-red-600 md:mb-10">
         Projects
       </h1>
       <div className="flex items-center justify-center">
         <button
           onClick={toggleFilter}
-          className="-mt-8 mb-4 hidden aspect-square rounded-full bg-indigo-600 p-2 hover:bg-indigo-700 md:inline-block"
+          className="-mt-8 mb-4 hidden aspect-square rounded-full bg-red-700 p-2 hover:bg-red-700 md:inline-block"
         >
           <img
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/icon%2Ffilter.png?alt=media&token=daac11a2-de56-46c7-aafe-5ca7260aa0a6"
@@ -112,7 +112,7 @@ export default function Project() {
         {filteredItems.map((item) => (
           <div
             key={item.name}
-            className="w-full max-w-md transform overflow-hidden rounded-xl bg-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
+            className="w-full max-w-md transform overflow-hidden rounded-xl bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
           >
             <div className="relative">
               <a href={item.href} target="_blank" rel="noopener noreferrer">
@@ -124,10 +124,10 @@ export default function Project() {
               </a>
             </div>
             <div className="p-2">
-              <h3 className="text-center text-2xl font-semibold text-indigo-300">
+              <h3 className="text-center text-2xl font-semibold text-red-500">
                 {item.name}
               </h3>
-              <div className="text-center text-sm text-gray-400">
+              <div className="text-center text-sm text-neutral-400">
                 {item.skills.join(", ")}
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function Project() {
       </div>
       <button
         onClick={toggleFilter}
-        className="fixed bottom-4 right-4 aspect-square rounded-full bg-indigo-600 p-2 hover:bg-indigo-700 md:hidden"
+        className="fixed bottom-4 right-4 aspect-square rounded-full bg-red-700 p-2 hover:bg-red-700 md:hidden"
       >
         <img
           src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/icon%2Ffilter.png?alt=media&token=daac11a2-de56-46c7-aafe-5ca7260aa0a6"
@@ -145,19 +145,19 @@ export default function Project() {
       </button>
 
       {isFilterOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
-          <div className="w-96 rounded-lg bg-gray-900 p-6">
-            <h3 className="mb-4 text-center text-2xl text-indigo-400">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-800 bg-opacity-50">
+          <div className="w-96 rounded-lg bg-neutral-900 p-6">
+            <h3 className="mb-4 text-center text-2xl text-red-600">
               Filter Projects
             </h3>
             <div className="space-y-4">
               <div>
-                <h4 className="text-lg text-indigo-300">Skills</h4>
+                <h4 className="text-lg text-red-500">Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
                     <label
                       key={skill.id}
-                      className="inline-flex items-center text-sm text-gray-400"
+                      className="inline-flex items-center text-sm text-neutral-400"
                     >
                       <input
                         type="checkbox"
@@ -173,7 +173,7 @@ export default function Project() {
             </div>
             <div className="mt-6 flex justify-center space-x-4">
               <button
-                className="rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
+                className="rounded-lg bg-red-700 px-4 py-2 text-white hover:bg-red-700"
                 onClick={toggleFilter}
               >
                 Close

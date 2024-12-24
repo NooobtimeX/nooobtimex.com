@@ -19,8 +19,8 @@ export default function Header() {
   };
 
   return (
-    <nav className="sticky top-0 z-40 mb-1 rounded-b-xl bg-gray-900 shadow-xl">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-40 rounded-b-xl bg-neutral-900 shadow-xl">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Mobile menu button */}
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -45,7 +45,7 @@ export default function Header() {
                 height={36}
                 className="rounded-full"
               />
-              <span className="ml-3 text-lg font-semibold text-indigo-400">
+              <span className="ml-3 text-lg font-semibold text-red-600">
                 Portfolio
               </span>
             </Link>
@@ -57,8 +57,8 @@ export default function Header() {
                 href={item.href}
                 className={`px-3 py-2 text-sm font-medium ${
                   pathname === item.href
-                    ? "text-indigo-400"
-                    : "text-gray-300 hover:text-indigo-400"
+                    ? "text-red-600"
+                    : "text-neutral-300 hover:text-red-600"
                 }`}
               >
                 {item.name}
@@ -68,7 +68,7 @@ export default function Header() {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="absolute z-50 w-full rounded-xl bg-gray-800 p-2 sm:hidden">
+        <div className="absolute z-50 w-full rounded-xl bg-neutral-800 p-2 sm:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navigation.map((item) => (
               <a
@@ -76,8 +76,8 @@ export default function Header() {
                 href={item.href}
                 className={`block px-3 py-2 text-sm font-medium ${
                   pathname === item.href
-                    ? "text-indigo-400"
-                    : "text-gray-300 hover:text-indigo-400"
+                    ? "text-red-600"
+                    : "text-neutral-300 hover:text-red-600"
                 }`}
               >
                 {item.name}

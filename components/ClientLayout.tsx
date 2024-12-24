@@ -16,7 +16,7 @@ export default function ClientLayout({
     <>
       <GoogleTagManager gtmId="GTM-5PVXPTWP" />
       <Header />
-      <main className="mx-auto my-2 mb-20 min-h-screen max-w-8xl">
+      <main className="mx-auto mb-20 min-h-screen">
         <AnimatePresence mode="wait">
           <motion.div
             key={pathname}
