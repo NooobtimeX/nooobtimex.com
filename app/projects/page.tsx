@@ -8,14 +8,54 @@ export default function Project() {
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   const skills = [
-    { name: "NEXT JS", id: "NEXT JS" },
-    { name: "Firebase", id: "Firebase" },
-    { name: "Tailwind CSS", id: "Tailwind CSS" },
-    { name: "NUXT JS", id: "NUXT JS" },
-    { name: "Vercel", id: "Vercel" },
-    { name: "Supabase", id: "Supabase" },
-    { name: "WordPress", id: "WordPress" },
-    { name: "WooCommerce", id: "WooCommerce" },
+    {
+      name: "NEXT JS",
+      id: "NEXT JS",
+      photo:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fnextjs.ico?alt=media&token=1bc6718b-bc03-4fac-8e5d-f07ed159f209",
+    },
+    {
+      name: "Firebase",
+      id: "Firebase",
+      photo:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Ffirebase.png?alt=media&token=e50b5c7b-10d4-4036-be9d-9fae6739bef8",
+    },
+    {
+      name: "Tailwind CSS",
+      id: "Tailwind CSS",
+      photo:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Ftailwindcss.png?alt=media&token=9c897653-80bb-444f-b19f-9f938db2d303",
+    },
+    {
+      name: "NUXT JS",
+      id: "NUXT JS",
+      photo:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fnuxtjs.png?alt=media&token=9bd21d09-a9df-4fc8-b42f-03c57f1eb6bc",
+    },
+    {
+      name: "Vercel",
+      id: "Vercel",
+      photo:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fvercel.png?alt=media&token=55928e11-b18e-4af9-b5ba-400a43537829",
+    },
+    {
+      name: "Supabase",
+      id: "Supabase",
+      photo:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fsupabase.jpg?alt=media&token=b8b7f624-0995-41fd-85fa-efa114b166f8",
+    },
+    {
+      name: "WordPress",
+      id: "WordPress",
+      photo:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fwordpress.png?alt=media&token=4befff12-96a2-44ba-b5cc-8bf70196d48b",
+    },
+    {
+      name: "WooCommerce",
+      id: "WooCommerce",
+      photo:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2FWooCommerce.png?alt=media&token=8fd1918d-9ca2-4ac9-82e7-f43bf653f6c9",
+    },
   ];
 
   const items = [
@@ -152,25 +192,31 @@ export default function Project() {
         {isFilterOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-800 bg-opacity-50">
             <div className="w-96 rounded-lg bg-neutral-900 p-6">
-              <label className="mb-4 text-center text-2xl text-red-600">
-                Filter Projects
-              </label>
+              <p className="mb-4 text-center text-2xl text-red-600">FILTER</p>
               <div className="space-y-4">
                 <div>
                   <div className="flex flex-wrap gap-2">
                     {skills.map((skill) => (
-                      <label
+                      <div
                         key={skill.id}
-                        className="inline-flex items-center text-sm text-neutral-400"
+                        onClick={() => handleSkillChange(skill.id)}
+                        className={`flex cursor-pointer items-center gap-2 rounded-lg p-2 transition-colors duration-300 ${
+                          selectedSkills.includes(skill.id)
+                            ? "bg-red-600"
+                            : "bg-transparent"
+                        }`}
                       >
-                        <input
-                          type="checkbox"
-                          className="mr-2"
-                          checked={selectedSkills.includes(skill.id)}
-                          onChange={() => handleSkillChange(skill.id)}
+                        <img
+                          src={skill.photo}
+                          alt={skill.name}
+                          width={20}
+                          height={20}
+                          className="rounded-lg"
                         />
-                        {skill.name}
-                      </label>
+                        <span className="text-sm text-neutral-400">
+                          {skill.name}
+                        </span>
+                      </div>
                     ))}
                   </div>
                 </div>
