@@ -18,11 +18,10 @@ export default function AboutMe() {
           />
         </div>{" "}
         <div className="mx-auto max-w-3xl">
-          <h2 className="mt-2 text-5xl font-bold text-red-500">
-            Wongsaphat Puangsorn{" "}
-            <span className="text-3xl text-neutral-400">({age})</span>
+          <h2 className="mt-2 text-5xl font-bold text-red-600">
+            Wongsaphat Puangsorn <span className="text-3xl">({age})</span>
           </h2>
-          <p className="text-lg leading-relaxed text-neutral-300">
+          <p className="text-lg leading-relaxed">
             I am a skilled software developer currently pursuing a degree in
             <span className="font-semibold text-red-600"> {bachelor}</span> at
             <span className="font-semibold text-red-600"> {university}</span>.

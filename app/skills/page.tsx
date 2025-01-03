@@ -95,7 +95,7 @@ export default function Skill() {
         </h1>
         {skills.map((category) => (
           <React.Fragment key={category.category}>
-            <h2 className="mb-2 text-3xl font-bold text-red-600">
+            <h2 className="mb-2 text-3xl font-bold text-neutral-300">
               {category.category} Skills
             </h2>
             <div className="mb-6 flex flex-wrap justify-center gap-4">

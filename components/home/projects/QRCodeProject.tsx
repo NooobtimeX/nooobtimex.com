@@ -37,16 +37,6 @@ export default function QRCodeProject() {
       name: "Supabase",
     },
   ];
-  const contributtors = [
-    {
-      name: "NooobtimeX",
-      src: "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/people_profile%2FNooobtimeX.webp?alt=media&token=2449a999-5b38-4e2d-a032-f295934d94e8",
-    },
-    {
-      name: "Tateung",
-      src: "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/people_profile%2FTateung.png?alt=media&token=97a020cf-c11f-4790-a435-a54e17f316c7",
-    },
-  ];
   return (
     <div className="p-2">
       {/* QR FOOD */}
@@ -70,12 +60,10 @@ export default function QRCodeProject() {
           </div>
         </div>
 
-        <div className="p-2">
-          <h3 className="text-center text-3xl font-bold text-red-600">
-            QR FOOD
-          </h3>
+        <div className="my-auto space-y-2 p-2">
+          <h3 className="text-center text-3xl font-bold">QR FOOD</h3>
           <div>
-            <h4 className="text-center text-lg text-red-500">Skills</h4>
+            <p className="text-center text-lg">Skills</p>
             <div className="flex flex-wrap justify-center gap-3">
               {skills.map((skill, index) => (
                 <div
@@ -84,27 +72,10 @@ export default function QRCodeProject() {
                 >
                   <img
                     src={skill.src}
-                    width={40}
-                    height={40}
+                    width={50}
+                    height={50}
                     alt={skill.name}
                     className="rounded-none"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="p-2">
-            <h4 className="text-center text-lg text-red-500">Contributtors</h4>
-            <div className="mt-2 flex flex-wrap justify-center gap-4">
-              {contributtors.map((contributor, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center rounded-full border border-red-600 p-1 shadow-md transition-transform duration-300 hover:scale-110"
-                >
-                  <img
-                    src={contributor.src}
-                    alt={contributor.name}
-                    className="h-10 w-10 rounded-full"
                   />
                 </div>
               ))}

@@ -29,7 +29,6 @@ export default function ClientLayout({
           </motion.div>
         </AnimatePresence>
       </main>
-      <Footer />
     </>
   );
 }

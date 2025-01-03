@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Oswald as OswaldFont } from "next/font/google";
 import ClientLayout from "@/components/ClientLayout"; // Import the client layout
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = OswaldFont({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Wongsaphat Puangsorn",
+  title: "Wongsaphat Puangsorn | Portfolio",
   abstract:
     "Portfolio of Wongsaphat Puangsorn - Thammasat University Student and Software Developer from Thailand",
   description:
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={oswald.className}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

@@ -22,5 +22,8 @@ body {
 }
 
 img {
-  @apply rounded-xl;
+  @apply rounded-2xl;
+}
+button {
+  @apply rounded-full px-4 py-2 text-white;
 }

@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation"; // For App Router
 import Link from "next/link";
 
 const navigation = [
-  { href: "/", name: "About Me" },
-  { href: "/skills", name: "Skills" },
-  { href: "/projects", name: "Projects" },
+  { href: "/", name: "ABOUT ME" },
+  { href: "/skills", name: "SKILLS" },
+  { href: "/projects", name: "PROJECTS" },
 ];
 
 export default function Header() {
@@ -19,24 +19,30 @@ export default function Header() {
   };
 
   return (
-    <nav className="bg-background/75 sticky top-0 z-40 mb-1 rounded-b-xl bg-neutral-900 shadow-xl backdrop-blur">
+    <nav className="bg-background/75 sticky top-0 z-40 mb-1 rounded-b-2xl bg-neutral-900 shadow-xl backdrop-blur">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          {/* Mobile menu button */}
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button
-              onClick={handleMenuToggle}
-              className="inline-flex items-center justify-center p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isMobileMenuOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        {/* Wrapper for 3 sections: start, center, end */}
+        <div className="relative flex h-16 items-center">
+          {/* Start Section */}
+          <div className="flex flex-1 items-center justify-start">
+            {/* Mobile menu button (only visible on small screens) */}
+            <div className="mr-2 flex items-center sm:hidden">
+              <button
+                onClick={handleMenuToggle}
+                className="inline-flex items-center justify-center p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset"
+              >
+                <span className="sr-only">
+                  {isMobileMenuOpen ? "Close main menu" : "Open main menu"}
+                </span>
+                {isMobileMenuOpen ? (
+                  <XMarkIcon className="h-6 w-6" />
+                ) : (
+                  <Bars3Icon className="h-6 w-6" />
+                )}
+              </button>
+            </div>
+
+            {/* Logo / Brand */}
             <Link href="/" className="flex items-center">
               <img
                 src="/favicon.ico"
@@ -45,14 +51,16 @@ export default function Header() {
                 height={36}
                 className="rounded-full"
               />
-              <span className="ml-3 text-lg font-semibold text-red-600">
-                Portfolio
+              <span className="ml-3 text-lg font-bold text-red-600">
+                PORTFOLIO
               </span>
             </Link>
           </div>
-          <div className="hidden sm:flex sm:space-x-4">
+
+          {/* Center Section */}
+          <div className="hidden flex-1 items-center justify-center space-x-4 sm:flex">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={`px-3 py-2 text-sm font-medium ${
@@ -62,16 +70,29 @@ export default function Header() {
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
+          </div>
+          {/* End Section */}
+          <div className="hidden flex-1 items-center justify-end sm:flex">
+            <Link
+              href="/contact"
+              className="px-3 py-2 text-sm font-medium text-neutral-300 hover:text-red-600"
+            >
+              <button className="bg-red-500 font-medium text-white shadow-md transition hover:bg-red-600">
+                CONTACT
+              </button>
+            </Link>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu (overlay) */}
       {isMobileMenuOpen && (
-        <div className="bg-background/75 absolute z-50 w-full rounded-xl bg-neutral-800 p-2 backdrop-blur sm:hidden">
+        <div className="bg-background/75 absolute z-50 w-full rounded-xl bg-neutral-900 p-2 backdrop-blur sm:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={`block px-3 py-2 text-sm font-medium ${
@@ -81,7 +102,7 @@ export default function Header() {
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
