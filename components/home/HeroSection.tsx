@@ -9,17 +9,17 @@ export default function HeroSection() {
       <p className="mt-4 max-w-2xl text-center text-lg md:text-xl">
         Passionate about turning ideas into seamless digital experiences. I
         specialize in modern web development with frameworks like{" "}
-        <span className="text-red-500">Next.js</span>.
+        <span className="text-red-500">NEXT JS</span>.
       </p>
       <div className="mt-8 flex space-x-4">
         <Link href="/projects">
           <button className="bg-red-500 px-6 py-3 font-medium shadow-md transition hover:bg-red-600">
-            View My Projects
+            VIEW PROJECTS
           </button>
         </Link>
         <Link href="/skills">
           <button className="bg-neutral-600 px-6 py-3 font-medium shadow-md transition hover:bg-neutral-700">
-            View My Skills
+            VIEW SKILLS
           </button>
         </Link>
       </div>
