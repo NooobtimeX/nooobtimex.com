@@ -80,7 +80,7 @@ export default function QRCodeProject() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex h-16 w-16 transform flex-col items-center justify-center rounded-lg bg-neutral-900 shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-red-600 md:h-20 md:w-20 xl:h-24 xl:w-24"
+                  className="flex h-16 w-16 transform flex-col items-center justify-center rounded-lg bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-red-600 md:h-20 md:w-20 xl:h-24 xl:w-24"
                 >
                   <img
                     src={skill.src}
@@ -95,18 +95,16 @@ export default function QRCodeProject() {
           </div>
           <div className="p-2">
             <h4 className="text-center text-lg text-red-500">Contributtors</h4>
-            <div className="flex flex-wrap justify-center gap-3">
-              {contributtors.map((contributtor, index) => (
+            <div className="mt-2 flex flex-wrap justify-center gap-4">
+              {contributtors.map((contributor, index) => (
                 <div
                   key={index}
-                  className="flex transform flex-col items-center justify-center rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                  className="flex flex-col items-center justify-center rounded-full border border-red-600 p-1 shadow-md transition-transform duration-300 hover:scale-110"
                 >
                   <img
-                    src={contributtor.src}
-                    width={40}
-                    height={40}
-                    alt={contributtor.name}
-                    className="rounded-full border border-red-600"
+                    src={contributor.src}
+                    alt={contributor.name}
+                    className="h-10 w-10 rounded-full"
                   />
                 </div>
               ))}

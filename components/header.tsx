@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <nav className="sticky top-0 z-40 rounded-b-xl bg-neutral-900 shadow-xl">
+    <nav className="bg-background/75 sticky top-0 z-40 mb-1 rounded-b-xl bg-neutral-900 shadow-xl backdrop-blur">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Mobile menu button */}
@@ -68,7 +68,7 @@ export default function Header() {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="absolute z-50 w-full rounded-xl bg-neutral-800 p-2 sm:hidden">
+        <div className="bg-background/75 absolute z-50 w-full rounded-xl bg-neutral-800 p-2 backdrop-blur sm:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navigation.map((item) => (
               <a
