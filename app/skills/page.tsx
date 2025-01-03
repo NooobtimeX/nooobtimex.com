@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 const skills = [
   {
@@ -82,9 +83,9 @@ const skills = [
 export default function Skill() {
   return (
     <div>
-      <head>
+      <Head>
         <link rel="canonical" href="https://nooobtimex.me/skills" />
-      </head>
+      </Head>
       <div
         className="flex flex-col items-center bg-neutral-900 p-4 text-white"
         id="skill"

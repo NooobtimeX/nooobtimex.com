@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Project() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -94,9 +95,9 @@ export default function Project() {
 
   return (
     <div>
-      <head>
+      <Head>
         <link rel="canonical" href="https://nooobtimex.me/projects" />
-      </head>
+      </Head>
       <div className="rounded-lg bg-neutral-900 p-4 text-white" id="project">
         <h1 className="mb-2 text-center text-4xl font-bold text-red-600 md:mb-10">
           Projects
