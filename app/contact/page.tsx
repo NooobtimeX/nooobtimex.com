@@ -39,7 +39,7 @@ export default function Contact() {
           {contactDetails.map((detail, index) => (
             <div
               key={index}
-              className="my-auto h-full gap-4 rounded-xl bg-neutral-800 px-4 py-10 shadow-md"
+              className="my-auto h-full gap-4 rounded-xl px-4 py-10 shadow-md"
             >
               <h3 className="text-lg font-semibold text-red-600">
                 {detail.title}

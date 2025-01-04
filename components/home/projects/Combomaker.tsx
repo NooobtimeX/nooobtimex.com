@@ -63,7 +63,7 @@ export default function Combomaker() {
                 alt="combomaker.net"
                 className="mx-auto max-h-80"
               />
-              <label className="absolute inset-0 flex items-center justify-center rounded-xl bg-black bg-opacity-70 text-lg font-bold text-white opacity-0 transition-opacity duration-300 hover:cursor-pointer group-hover:opacity-100">
+              <label className="absolute inset-0 flex items-center justify-center rounded-xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:cursor-pointer group-hover:opacity-100">
                 Combo Maker
               </label>
             </Link>

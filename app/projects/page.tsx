@@ -170,7 +170,7 @@ export default function Project() {
                 <h2 className="text-center text-2xl font-semibold">
                   {item.name}
                 </h2>
-                <div className="text-center text-sm text-neutral-400">
+                <div className="text-center text-sm text-neutral-200">
                   {item.skills.join(", ")}
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function Project() {
         </button>
 
         {isFilterOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-800 bg-opacity-50">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-900 bg-opacity-50">
             <div className="w-96 rounded-lg bg-neutral-900 p-6">
               <p className="mb-4 text-center text-2xl text-red-600">FILTER</p>
               <div className="space-y-4">
@@ -221,7 +221,7 @@ export default function Project() {
               </div>
               <div className="mt-6 flex justify-center space-x-4">
                 <button
-                  className="bg-red-700 px-4 py-2 text-white hover:bg-red-700"
+                  className="bg-red-700 px-4 py-2 text-neutral-200 hover:bg-red-700"
                   onClick={toggleFilter}
                 >
                   Close

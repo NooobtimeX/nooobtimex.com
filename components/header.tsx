@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const navigation = [
-  { href: "/", name: "ABOUT ME" },
+  { href: "/", name: "HOME" },
   { href: "/skills", name: "SKILLS" },
   { href: "/projects", name: "PROJECTS" },
 ];
@@ -26,7 +26,7 @@ export default function Header() {
           <div className="mr-2 flex items-center md:hidden">
             <button
               onClick={handleMenuToggle}
-              className="inline-flex items-center justify-center p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset"
+              className="inline-flex items-center justify-center p-2 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-inset"
             >
               <span className="sr-only">
                 {isMobileMenuOpen ? "Close main menu" : "Open main menu"}
@@ -61,10 +61,10 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 text-xs lg:text-sm ${
+                className={`px-3 py-2 text-xs lg:text-sm xl:lg:text-base ${
                   pathname === item.href
                     ? "text-red-600"
-                    : "text-neutral-300 hover:text-red-600"
+                    : "text-neutral-200 hover:text-red-600"
                 }`}
               >
                 {item.name}
@@ -76,9 +76,9 @@ export default function Header() {
           <div className="hidden flex-1 items-center justify-end md:flex">
             <Link
               href="/contact"
-              className="px-3 py-2 text-sm font-medium text-neutral-300 hover:text-red-600"
+              className="px-3 py-2 text-sm font-medium text-neutral-200 hover:text-red-600"
             >
-              <button className="bg-red-500 font-medium text-white shadow-md transition hover:bg-red-600">
+              <button className="bg-red-500 font-medium text-neutral-200 shadow-md transition hover:bg-red-600">
                 CONTACT
               </button>
             </Link>
@@ -97,7 +97,7 @@ export default function Header() {
                 className={`block px-3 py-2 text-sm font-medium ${
                   pathname === item.href
                     ? "text-red-600"
-                    : "text-neutral-300 hover:text-red-600"
+                    : "text-neutral-200 hover:text-red-600"
                 }`}
               >
                 {item.name}

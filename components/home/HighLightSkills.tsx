@@ -82,21 +82,18 @@ const skills = [
 export default function Skill() {
   return (
     <div>
-      <div
-        className="flex flex-col items-center bg-neutral-800 p-4 text-white"
-        id="skill"
-      >
+      <div className="flex flex-col items-center p-4 text-white" id="skill">
         <h1 className="mb-2 text-center text-4xl font-bold">Skills</h1>
         {skills.map((category) => (
           <React.Fragment key={category.category}>
-            <h2 className="mb-2 text-3xl font-bold text-neutral-300">
+            <h2 className="mb-2 text-3xl font-bold text-neutral-200">
               {category.category} Skills
             </h2>
             <div className="mb-6 flex flex-wrap justify-center gap-4">
               {category.skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex h-28 w-28 transform flex-col items-center justify-center rounded-lg bg-neutral-900 p-2 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-red-600"
+                  className="flex h-28 w-28 transform flex-col items-center justify-center rounded-lg bg-neutral-800 p-2 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-red-600"
                 >
                   <img
                     src={skill.src}

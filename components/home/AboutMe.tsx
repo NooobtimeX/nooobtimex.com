@@ -6,7 +6,7 @@ export default function AboutMe() {
   let university = "Thammasat University";
   let bachelor = "Computer Science";
   return (
-    <div className="mx-auto flex min-h-96 items-center justify-center bg-neutral-800 p-2">
+    <div className="mx-auto flex min-h-96 items-center justify-center p-2">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-6 md:flex-row">
         <div className="h-40 w-40 overflow-hidden rounded-full shadow-lg">
           <img
