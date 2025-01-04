@@ -90,9 +90,7 @@ export default function Skill() {
         className="flex flex-col items-center bg-neutral-900 p-4 text-white"
         id="skill"
       >
-        <h1 className="mb-2 text-center text-4xl font-bold text-red-600">
-          Skills
-        </h1>
+        <h1>SKILLS</h1>
         {skills.map((category) => (
           <React.Fragment key={category.category}>
             <h2 className="mb-2 text-3xl font-bold text-neutral-300">
@@ -109,7 +107,7 @@ export default function Skill() {
                     alt={skill.name}
                     width={50}
                     height={50}
-                    className="rounded-lg"
+                    className="rounded-none"
                   />
                   <span className="mt-2 text-sm font-semibold text-neutral-200">
                     {skill.name}

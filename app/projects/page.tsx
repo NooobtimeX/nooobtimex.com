@@ -15,14 +15,14 @@ export default function Project() {
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fnextjs.ico?alt=media&token=1bc6718b-bc03-4fac-8e5d-f07ed159f209",
     },
     {
-      name: "Firebase",
-      id: "Firebase",
+      name: "FIREBASE",
+      id: "FIREBASE",
       photo:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Ffirebase.png?alt=media&token=e50b5c7b-10d4-4036-be9d-9fae6739bef8",
     },
     {
-      name: "Tailwind CSS",
-      id: "Tailwind CSS",
+      name: "TAILWIND CSS",
+      id: "TAILWIND CSS",
       photo:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Ftailwindcss.png?alt=media&token=9c897653-80bb-444f-b19f-9f938db2d303",
     },
@@ -33,26 +33,26 @@ export default function Project() {
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fnuxtjs.png?alt=media&token=9bd21d09-a9df-4fc8-b42f-03c57f1eb6bc",
     },
     {
-      name: "Vercel",
-      id: "Vercel",
+      name: "VERCEL",
+      id: "VERCEL",
       photo:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fvercel.png?alt=media&token=55928e11-b18e-4af9-b5ba-400a43537829",
     },
     {
-      name: "Supabase",
-      id: "Supabase",
+      name: "SUPABASE",
+      id: "SUPABASE",
       photo:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fsupabase.jpg?alt=media&token=b8b7f624-0995-41fd-85fa-efa114b166f8",
     },
     {
-      name: "WordPress",
-      id: "WordPress",
+      name: "WORDPRESS",
+      id: "WORDPRESS",
       photo:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fwordpress.png?alt=media&token=4befff12-96a2-44ba-b5cc-8bf70196d48b",
     },
     {
-      name: "WooCommerce",
-      id: "WooCommerce",
+      name: "WOOCOMMERCE",
+      id: "WOOCOMMERCE",
       photo:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2FWooCommerce.png?alt=media&token=8fd1918d-9ca2-4ac9-82e7-f43bf653f6c9",
     },
@@ -64,56 +64,56 @@ export default function Project() {
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2FPorfolio.png?alt=media&token=031b0177-b71d-47f0-aabe-dcfa01677a15",
       name: "Porfolio",
-      skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
+      skills: ["NEXT JS", "FIREBASE", "TAILWIND CSS"],
     },
     {
       href: "https://github.com/NooobtimeX/QR-Food",
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2FQRCODE.png?alt=media&token=916e4c43-724e-4e30-86c0-155ee8093da5",
       name: "QR FOOD",
-      skills: ["NUXT JS", "Vercel", "Supabase", "Tailwind CSS"],
+      skills: ["NUXT JS", "VERCEL", "SUPABASE", "TAILWIND CSS"],
     },
     {
       href: "https://combomaker.net/",
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Fcombomaker.png?alt=media&token=eb2c155a-5f69-4d92-9e2a-a84fa8f5af13",
-      name: "combomaker.net",
-      skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
+      name: "Combo Maker",
+      skills: ["NEXT JS", "FIREBASE", "TAILWIND CSS"],
     },
     {
       href: "https://hoyosmash.com/",
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Fhoyosmash.png?alt=media&token=b38f2ff5-c441-4e3b-866a-a4ab32b6b903",
-      name: "hoyosmash.com",
-      skills: ["NEXT JS", "Firebase", "Tailwind CSS"],
+      name: "HoyoSmash",
+      skills: ["NEXT JS", "FIREBASE", "TAILWIND CSS"],
     },
     {
       href: "https://www.rs-trophy.com",
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Frstrophy.png?alt=media&token=c84a6e24-f81f-4eb1-bd96-733b64f1a28f",
       name: "rs-trophy.com",
-      skills: ["WordPress", "WooCommerce"],
+      skills: ["WORDPRESS", "WOOCOMMERCE"],
     },
     {
       href: "https://www.rs-medal.com",
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Frsmedal.png?alt=media&token=7b8e1c63-2948-432a-b6fa-0d650a992b07",
       name: "rs-medal.com",
-      skills: ["WordPress", "WooCommerce"],
+      skills: ["WORDPRESS", "WOOCOMMERCE"],
     },
     {
       href: "https://www.rs-award.com",
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Frsaward.png?alt=media&token=1c5aa005-14b1-4462-8d06-f7faa909dd45",
       name: "rs-award.com",
-      skills: ["WordPress", "WooCommerce"],
+      skills: ["WORDPRESS", "WOOCOMMERCE"],
     },
     {
       href: "https://www.rs-ribbon.com",
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Frsribbon.png?alt=media&token=5e654a8a-534e-4d12-8b84-12fe4f9a4b32",
       name: "rs-ribbon.com",
-      skills: ["WordPress", "WooCommerce"],
+      skills: ["WORDPRESS", "WOOCOMMERCE"],
     },
   ];
 
@@ -139,9 +139,7 @@ export default function Project() {
         <link rel="canonical" href="https://nooobtimex.me/projects" />
       </Head>
       <div className="rounded-lg bg-neutral-900 p-4 text-white" id="project">
-        <h1 className="mb-2 text-center text-4xl font-bold text-red-600 md:mb-10">
-          Projects
-        </h1>
+        <h1 className="md:mb-10">PROJECTS</h1>
         <div className="flex items-center justify-center">
           <button
             onClick={toggleFilter}
@@ -211,9 +209,9 @@ export default function Project() {
                           alt={skill.name}
                           width={20}
                           height={20}
-                          className="rounded-lg"
+                          className="rounded-none"
                         />
-                        <span className="text-sm text-neutral-400">
+                        <span className="text-sm text-neutral-200">
                           {skill.name}
                         </span>
                       </div>
