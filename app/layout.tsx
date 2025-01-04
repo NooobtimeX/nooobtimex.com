@@ -6,7 +6,7 @@ import "./globals.css";
 const oswald = OswaldFont({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wongsaphat Puangsorn | Portfolio",
+  title: "Portfolio | Wongsaphat Puangsorn",
   abstract:
     "Portfolio of Wongsaphat Puangsorn - Thammasat University Student and Software Developer from Thailand",
   description:

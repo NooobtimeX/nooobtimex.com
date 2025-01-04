@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wongsaphat Puangsorn Portfolio | Contact",
+  title: "Portfolio | Contact | Wongsaphat Puangsorn",
   abstract:
     "Contact Portfolio of Wongsaphat Puangsorn - Thammasat University Student and Software Developer from Thailand",
   description:
