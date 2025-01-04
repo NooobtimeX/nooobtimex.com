@@ -27,11 +27,11 @@ export default function Contact() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-4">
+    <div className="flex flex-col items-center justify-center">
       <Head>
         <link rel="canonical" href="https://nooobtimex.me/contact" />
       </Head>
-      <div className="w-full max-w-4xl px-4">
+      <div className="w-full max-w-4xl">
         <h1>CONTACT</h1>
         <h2 className="mb-4 text-2xl font-bold">Get in touch</h2>
         <p className="mb-8">Wongsaphat Puangsorn</p>

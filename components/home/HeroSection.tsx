@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-neutral-900 px-6 text-white">
       <h1 className="text-center text-4xl font-bold md:text-6xl">
-        <span className="text-red-600">WEB DEV Portfolio </span>
+        <span className="text-red-600">WEB DEV Portfolio</span>
       </h1>
       <p className="mt-4 max-w-2xl text-center text-lg md:text-xl">
         Passionate about turning ideas into seamless digital experiences. I

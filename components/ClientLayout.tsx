@@ -15,21 +15,19 @@ export default function ClientLayout({
   return (
     <>
       <GoogleTagManager gtmId="GTM-5PVXPTWP" />
-      <Header />
-      <main className="mx-auto mb-20 min-h-screen">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={pathname}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.3 }}
-          >
-            {children}
-          </motion.div>
-        </AnimatePresence>
-      </main>
-      <Footer />
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={pathname}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Header />
+          <main className="mx-auto mb-20 min-h-screen">{children}</main>
+          <Footer />
+        </motion.div>
+      </AnimatePresence>
     </>
   );
 }

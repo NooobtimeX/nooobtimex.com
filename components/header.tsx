@@ -40,14 +40,14 @@ export default function Header() {
           </div>
 
           {/* Centered Logo / Brand for Small Screens */}
-          <div className="-ml-6 flex flex-1 justify-center md:m-0 md:justify-start">
+          <div className="-ml-14 flex flex-1 justify-center md:m-0 md:justify-start">
             <Link href="/" className="flex items-center">
               <img
                 src="/favicon.ico"
                 alt="HoYoSmash"
                 width={36}
                 height={36}
-                className="rounded-full"
+                className="hidden rounded-full md:flex"
               />
               <span className="ml-3 text-lg font-bold text-red-600">
                 PORTFOLIO

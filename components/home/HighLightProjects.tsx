@@ -10,7 +10,9 @@ export default function Project() {
     <div className="min-h-96 bg-neutral-900 py-4">
       <h2 className="py-2 text-center text-4xl font-bold">Highlight Project</h2>
       <QRCodeProject />
+      <div className="mx-auto mt-4 max-w-6xl border-t border-neutral-700 pt-8"></div>
       <Combomaker />
+      <div className="mx-auto mt-4 max-w-6xl border-t border-neutral-700 pt-8"></div>
       <HoyoSmash />
       <div className="mt-6 flex items-center justify-center">
         <Link href="/projects">

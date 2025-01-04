@@ -29,7 +29,7 @@ export default function HoyoSmash() {
     <div className="p-2">
       {/* HoyoSmash */}
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 lg:grid-cols-2">
-        <div className="m-auto">
+        <div className="order-2 m-auto md:order-1">
           <div className="group relative">
             <Link
               href="https://hoyosmash.com/"
@@ -48,7 +48,7 @@ export default function HoyoSmash() {
           </div>
         </div>
 
-        <div className="my-auto p-2">
+        <div className="order-1 my-auto p-2 md:order-2">
           <h3 className="text-center text-3xl font-bold">HoyoSmash</h3>
           <div>
             <p className="text-center text-lg">Skills</p>
@@ -56,12 +56,12 @@ export default function HoyoSmash() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex h-16 w-16 transform flex-col items-center justify-center rounded-lg bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-red-600 md:h-20 md:w-20 xl:h-24 xl:w-24"
+                  className="flex h-14 w-14 transform flex-col items-center justify-center rounded-lg bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-red-600 md:h-20 md:w-20 xl:h-24 xl:w-24"
                 >
                   <img
                     src={skill.src}
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                     alt={skill.name}
                     className="rounded-none"
                   />

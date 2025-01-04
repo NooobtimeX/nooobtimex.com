@@ -37,12 +37,12 @@ export default function Combomaker() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex h-16 w-16 transform flex-col items-center justify-center rounded-lg bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-red-600 md:h-20 md:w-20 xl:h-24 xl:w-24"
+                  className="flex h-14 w-14 transform flex-col items-center justify-center rounded-lg bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-red-600 md:h-20 md:w-20 xl:h-24 xl:w-24"
                 >
                   <img
                     src={skill.src}
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                     alt={skill.name}
                     className="rounded-none"
                   />

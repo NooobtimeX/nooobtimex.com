@@ -82,7 +82,7 @@ const skills = [
 export default function Skill() {
   return (
     <div>
-      <div className="flex flex-col items-center p-4 text-white" id="skill">
+      <div className="flex flex-col items-center text-white" id="skill">
         <h1 className="mb-2 text-center text-4xl font-bold">Skills</h1>
         {skills.map((category) => (
           <React.Fragment key={category.category}>
@@ -100,7 +100,7 @@ export default function Skill() {
                     alt={skill.name}
                     width={50}
                     height={50}
-                    className="rounded-lg"
+                    className="rounded-none"
                   />
                   <span className="mt-2 text-sm font-semibold text-neutral-200">
                     {skill.name}

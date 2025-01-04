@@ -138,7 +138,7 @@ export default function Project() {
       <Head>
         <link rel="canonical" href="https://nooobtimex.me/projects" />
       </Head>
-      <div className="rounded-lg bg-neutral-900 p-4 text-white" id="project">
+      <div className="rounded-lg bg-neutral-900 text-white" id="project">
         <h1 className="md:mb-10">PROJECTS</h1>
         <div className="flex items-center justify-center">
           <button
