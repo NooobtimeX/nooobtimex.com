@@ -24,7 +24,7 @@ export function getAllPosts(): Post[] {
     .map((slug) => getPostBySlug(slug))
     // sort posts by date in descending order
     .sort((post1, post2) =>
-      post1.datePublished > post2.datePublished ? -1 : 1,
+      post1.datePublished > post2.datePublished ? -1 : 1
     );
   return posts;
 }

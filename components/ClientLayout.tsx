@@ -1,9 +1,9 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
-import { GoogleTagManager } from "@next/third-parties/google";
-import { usePathname } from "next/navigation";
-import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function ClientLayout({
   children,

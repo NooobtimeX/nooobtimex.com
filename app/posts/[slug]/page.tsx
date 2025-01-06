@@ -1,7 +1,7 @@
-import { notFound } from "next/navigation";
-import { getPostBySlug, getAllPosts } from "@/lib/api";
+import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
-import { parseISO, format } from "date-fns";
+import { format, parseISO } from "date-fns";
+import { notFound } from "next/navigation";
 
 type Params = {
   params: Promise<{
@@ -57,7 +57,7 @@ export default async function Post(props: Params) {
             dangerouslySetInnerHTML={{
               __html: content.replace(
                 /<a /g,
-                '<a class="text-blue-500 hover:underline" ',
+                '<a class="text-blue-500 hover:underline" '
               ),
             }}
           />

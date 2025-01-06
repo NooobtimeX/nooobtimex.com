@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import QRCodeProject from "./projects/QRCodeProject";
 import Combomaker from "./projects/Combomaker";
 import HoyoSmash from "./projects/HoyoSmash";
+import QRCodeProject from "./projects/QRCodeProject";
 
 export default function Project() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Head from "next/head";
+import { useState } from "react";
 
 export default function Project() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -121,7 +121,7 @@ export default function Project() {
 
   const handleSkillChange = (id: string) => {
     setSelectedSkills((prev) =>
-      prev.includes(id) ? prev.filter((skill) => skill !== id) : [...prev, id],
+      prev.includes(id) ? prev.filter((skill) => skill !== id) : [...prev, id]
     );
   };
 

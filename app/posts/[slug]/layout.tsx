@@ -1,6 +1,6 @@
 import { getPostBySlug } from "@/lib/api";
-import { notFound } from "next/navigation";
 import type { Metadata } from "next"; // Import Metadata type
+import { notFound } from "next/navigation";
 
 type Params = {
   slug: string;

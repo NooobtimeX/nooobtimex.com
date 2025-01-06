@@ -1,6 +1,6 @@
+import ClientLayout from "@/components/ClientLayout"; // Import the client layout
 import type { Metadata } from "next";
 import { Oswald as OswaldFont } from "next/font/google";
-import ClientLayout from "@/components/ClientLayout"; // Import the client layout
 import "./globals.css";
 
 const oswald = OswaldFont({ subsets: ["latin"] });
