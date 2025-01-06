@@ -53,7 +53,7 @@ export default function QRCodeProject() {
                 alt="QR FOOD"
                 className="mx-auto max-h-80"
               />
-              <label className="absolute inset-0 flex items-center justify-center rounded-xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:cursor-pointer group-hover:opacity-100">
+              <label className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:cursor-pointer group-hover:opacity-100">
                 QR FOOD
               </label>
             </Link>
@@ -68,7 +68,7 @@ export default function QRCodeProject() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex h-14 w-14 transform flex-col items-center justify-center rounded-lg bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-red-600 md:h-20 md:w-20 xl:h-24 xl:w-24"
+                  className="group relative flex h-14 w-14 transform flex-col items-center justify-center rounded-2xl bg-neutral-800 text-neutral-200 shadow-lg transition-transform duration-300 hover:scale-105 md:h-20 md:w-20 xl:h-24 xl:w-24"
                 >
                   <img
                     src={skill.src}
@@ -77,6 +77,9 @@ export default function QRCodeProject() {
                     alt={skill.name}
                     className="rounded-none"
                   />
+                  <label className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:cursor-pointer group-hover:opacity-100">
+                    {skill.name}
+                  </label>
                 </div>
               ))}
             </div>
