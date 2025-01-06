@@ -11,11 +11,8 @@ export default function Home() {
         <link rel="canonical" href="https://nooobtimex.me/" />
       </Head>
       <HeroSection />
-      <div className="mx-auto max-w-7xl border-t border-neutral-700 pt-8"></div>
       <AboutMe />
-      <div className="mx-auto max-w-7xl border-t border-neutral-700 pt-8"></div>
       <HighLightProjects />
-      <div className="mx-auto max-w-7xl border-t border-neutral-700 pt-8"></div>
       <HighLightSkills />
     </>
   );

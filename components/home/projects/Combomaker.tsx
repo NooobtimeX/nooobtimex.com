@@ -29,11 +29,11 @@ export default function Combomaker() {
     <div className="p-2">
       {/* QR FOOD */}
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 lg:grid-cols-2">
-        <div className="my-auto space-y-2 p-2">
+        <div className="m-auto space-y-2 p-2">
           <h3 className="text-center text-3xl font-bold">Combo Maker</h3>
           <div>
             <p className="text-center text-lg">Skills</p>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-3 max-w-lg">
               {skills.map((skill, index) => (
                 <div
                   key={index}

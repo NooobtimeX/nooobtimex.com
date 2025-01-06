@@ -48,11 +48,11 @@ export default function HoyoSmash() {
           </div>
         </div>
 
-        <div className="order-1 my-auto p-2 md:order-2">
+        <div className="order-1 m-auto p-2 md:order-2">
           <h3 className="text-center text-3xl font-bold">HoyoSmash</h3>
           <div>
             <p className="text-center text-lg">Skills</p>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-3 max-w-lg">
               {skills.map((skill, index) => (
                 <div
                   key={index}
