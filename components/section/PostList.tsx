@@ -15,7 +15,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
     <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
       {posts.map((post) => (
         <div
-          className="rounded-xl bg-neutral-800 p-2 shadow-lg"
+          className="rounded-2xl bg-neutral-800 p-2 shadow-lg"
           key={post.slug}
         >
           <Link
@@ -26,7 +26,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
               <img
                 src={post.Image}
                 alt={`Cover image for ${post.title}`}
-                className="h-auto w-full rounded-xl object-cover"
+                className="h-auto w-full rounded-2xl object-cover"
                 width={600}
                 height={200}
               />

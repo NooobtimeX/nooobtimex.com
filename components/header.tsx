@@ -88,7 +88,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="bg-background/75 absolute z-50 w-full rounded-xl bg-neutral-900 p-2 backdrop-blur md:hidden">
+        <div className="bg-background/75 absolute z-50 w-full rounded-2xl bg-neutral-900 p-2 backdrop-blur md:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navigation.map((item) => (
               <Link

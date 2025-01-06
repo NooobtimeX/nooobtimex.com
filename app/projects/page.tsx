@@ -138,7 +138,7 @@ export default function Project() {
       <Head>
         <link rel="canonical" href="https://nooobtimex.me/projects" />
       </Head>
-      <div className="rounded-lg bg-neutral-900 text-white" id="project">
+      <div className="rounded-2xl bg-neutral-900 text-white" id="project">
         <h1 className="md:mb-10">PROJECTS</h1>
         <div className="flex items-center justify-center">
           <button
@@ -155,14 +155,14 @@ export default function Project() {
           {filteredItems.map((item) => (
             <div
               key={item.name}
-              className="w-full max-w-md transform overflow-hidden rounded-xl bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
+              className="w-full max-w-md transform overflow-hidden rounded-2xl bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
             >
               <div className="relative">
                 <a href={item.href} target="_blank" rel="noopener noreferrer">
                   <img
                     src={item.imgSrc}
                     alt={item.name}
-                    className="h-48 w-full rounded-t-xl object-cover"
+                    className="h-48 w-full rounded-t-2xl object-cover"
                   />
                 </a>
               </div>
@@ -189,7 +189,7 @@ export default function Project() {
 
         {isFilterOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-900 bg-opacity-50">
-            <div className="w-96 rounded-lg bg-neutral-900 p-6">
+            <div className="w-96 rounded-2xl bg-neutral-900 p-6">
               <p className="mb-4 text-center text-2xl text-red-600">FILTER</p>
               <div className="space-y-4">
                 <div>
@@ -198,7 +198,7 @@ export default function Project() {
                       <div
                         key={skill.id}
                         onClick={() => handleSkillChange(skill.id)}
-                        className={`flex cursor-pointer items-center gap-2 rounded-lg p-2 transition-colors duration-300 ${
+                        className={`flex cursor-pointer items-center gap-2 rounded-2xl p-2 transition-colors duration-300 ${
                           selectedSkills.includes(skill.id)
                             ? "bg-red-600"
                             : "bg-transparent"
