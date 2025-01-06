@@ -33,7 +33,7 @@ export default async function Post(props: Params) {
           <img
             src={post.Image}
             alt={`Cover Image for ${post.title}`}
-            className="m-auto max-h-80 rounded-xl"
+            className="rounded-2x m-auto max-h-80"
           />
         </div>
         <div className="m-auto max-w-4xl">

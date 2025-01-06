@@ -100,7 +100,7 @@ export default function Skill() {
               {category.skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex h-24 w-24 transform flex-col items-center justify-center rounded-lg bg-neutral-800 p-2 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-red-600"
+                  className="flex h-24 w-24 transform flex-col items-center justify-center rounded-2xl bg-neutral-800 p-2 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-red-600"
                 >
                   <img
                     src={skill.src}

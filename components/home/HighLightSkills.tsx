@@ -93,13 +93,13 @@ export default function Skill() {
               {category.skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex h-28 w-28 transform flex-col items-center justify-center rounded-lg bg-neutral-800 p-2 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-red-600"
+                  className="flex h-24 w-24 transform flex-col items-center justify-center rounded-2xl bg-neutral-800 p-2 shadow-lg transition-transform duration-300 hover:scale-110 hover:bg-red-600"
                 >
                   <img
                     src={skill.src}
                     alt={skill.name}
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                     className="rounded-none"
                   />
                   <span className="mt-2 text-sm font-semibold text-neutral-200">
