@@ -1,5 +1,9 @@
 const contacts = [
   { name: "nooobtimex@gmail.com", url: "mailto:nooobtimex@gmail.com" },
+  {
+    name: "https://www.facebook.com/xnooobtime",
+    url: "https://www.facebook.com/xnooobtime",
+  },
 ];
 
 const contents = [
@@ -7,6 +11,12 @@ const contents = [
   { name: "PROJECTS", url: "/projects" },
   { name: "CONTACT", url: "/contact" },
   { name: "POSTS", url: "/posts" },
+];
+
+const projects = [
+  { name: "QR FOOD", url: "https://github.com/NooobtimeX/QR-Food" },
+  { name: "Combo Maker", url: "https://combomaker.net/" },
+  { name: "HoyoSmash", url: "https://hoyosmash.com/" },
 ];
 
 export default function Footer() {
@@ -85,6 +95,23 @@ export default function Footer() {
                     className="text-neutral-200 hover:text-red-500"
                   >
                     {contact.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-200">
+              HIGHTLIGHT PROJECT
+            </h3>
+            <ul className="mt-4 space-y-2">
+              {projects.map((project, index) => (
+                <li key={index}>
+                  <a
+                    href={project.url}
+                    className="text-neutral-200 hover:text-red-500"
+                  >
+                    {project.name}
                   </a>
                 </li>
               ))}
