@@ -68,7 +68,7 @@ export default function QRCodeProject() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="group relative flex h-14 w-14 transform flex-col items-center justify-center rounded-2xl bg-neutral-800 text-neutral-200 shadow-lg transition-transform duration-300 hover:scale-105 md:h-20 md:w-20 xl:h-24 xl:w-24"
+                  className="group relative flex h-14 w-14 transform flex-col items-center justify-center rounded-2xl  text-neutral-200 md:h-20 md:w-20 xl:h-24 xl:w-24"
                 >
                   <img
                     src={skill.src}
