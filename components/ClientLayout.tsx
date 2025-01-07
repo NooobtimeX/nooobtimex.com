@@ -24,7 +24,7 @@ export default function ClientLayout({
           transition={{ duration: 0.4 }}
         >
           <Header />
-          <main className="mx-auto mb-20 min-h-screen max-w-8xl">
+          <main className="mx-auto mb-20 min-h-screen container">
             {children}
           </main>
           <Footer />
