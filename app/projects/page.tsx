@@ -2,60 +2,30 @@
 
 import Head from "next/head";
 import { useState } from "react";
+import {
+  SiFirebase,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiSupabase,
+  SiTailwindcss,
+  SiVercel,
+  SiWoocommerce,
+  SiWordpress,
+} from "react-icons/si";
 
 export default function Project() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   const skills = [
-    {
-      name: "NEXT JS",
-      id: "NEXT JS",
-      photo:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fnextjs.ico?alt=media&token=1bc6718b-bc03-4fac-8e5d-f07ed159f209",
-    },
-    {
-      name: "FIREBASE",
-      id: "FIREBASE",
-      photo:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Ffirebase.png?alt=media&token=e50b5c7b-10d4-4036-be9d-9fae6739bef8",
-    },
-    {
-      name: "TAILWIND CSS",
-      id: "TAILWIND CSS",
-      photo:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Ftailwindcss.png?alt=media&token=9c897653-80bb-444f-b19f-9f938db2d303",
-    },
-    {
-      name: "NUXT JS",
-      id: "NUXT JS",
-      photo:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fnuxtjs.png?alt=media&token=9bd21d09-a9df-4fc8-b42f-03c57f1eb6bc",
-    },
-    {
-      name: "VERCEL",
-      id: "VERCEL",
-      photo:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fvercel.png?alt=media&token=55928e11-b18e-4af9-b5ba-400a43537829",
-    },
-    {
-      name: "SUPABASE",
-      id: "SUPABASE",
-      photo:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fsupabase.jpg?alt=media&token=b8b7f624-0995-41fd-85fa-efa114b166f8",
-    },
-    {
-      name: "WORDPRESS",
-      id: "WORDPRESS",
-      photo:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2Fwordpress.png?alt=media&token=4befff12-96a2-44ba-b5cc-8bf70196d48b",
-    },
-    {
-      name: "WOOCOMMERCE",
-      id: "WOOCOMMERCE",
-      photo:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/skill_logo%2FWooCommerce.png?alt=media&token=8fd1918d-9ca2-4ac9-82e7-f43bf653f6c9",
-    },
+    { name: "NEXT JS", id: "NEXT JS", icon: SiNextdotjs },
+    { name: "FIREBASE", id: "FIREBASE", icon: SiFirebase },
+    { name: "TAILWIND CSS", id: "TAILWIND CSS", icon: SiTailwindcss },
+    { name: "NUXT JS", id: "NUXT JS", icon: SiNuxtdotjs },
+    { name: "VERCEL", id: "VERCEL", icon: SiVercel },
+    { name: "SUPABASE", id: "SUPABASE", icon: SiSupabase },
+    { name: "WORDPRESS", id: "WORDPRESS", icon: SiWordpress },
+    { name: "WOOCOMMERCE", id: "WOOCOMMERCE", icon: SiWoocommerce },
   ];
 
   const items = [
@@ -204,13 +174,7 @@ export default function Project() {
                             : "bg-transparent"
                         }`}
                       >
-                        <img
-                          src={skill.photo}
-                          alt={skill.name}
-                          width={20}
-                          height={20}
-                          className="rounded-none"
-                        />
+                        <skill.icon size={20} className="text-neutral-200" />
                         <span className="text-sm text-neutral-200">
                           {skill.name}
                         </span>
