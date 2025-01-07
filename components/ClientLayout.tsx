@@ -24,7 +24,7 @@ export default function ClientLayout({
           transition={{ duration: 0.4 }}
         >
           <Header />
-          <main className="mx-auto mb-20 min-h-screen no-scrollbar overflow-y-scroll">
+          <main className="mx-auto mb-20 min-h-screen max-w-8xl">
             {children}
           </main>
           <Footer />
