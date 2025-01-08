@@ -10,7 +10,7 @@ type Params = {
 };
 
 export async function generateStaticParams() {
-  const posts = await getAllPosts(); // Make it async
+  const posts = await getAllPosts(); // Fetch posts asynchronously
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 
 export default async function Post(props: Params) {
   const params = await props.params;
-  const post = await getPostBySlug(params.slug); // Ensure this is also async
+  const post = await getPostBySlug(params.slug); // Fetch post data asynchronously
   if (!post) return notFound();
 
   const content = await markdownToHtml(post.content || "");
@@ -26,42 +26,37 @@ export default async function Post(props: Params) {
   const dateModified = format(parseISO(post.dateModified), "LLLL d, yyyy");
 
   return (
-    <main className="container mx-auto mb-4 px-3">
+    <main className="container mx-auto px-4 py-8 bg-base-200">
       <link rel="canonical" href={"https://hoyosmash.com/" + params.slug} />
-      <article>
-        <div className="m-auto my-2 max-w-3xl">
+      <article className="prose lg:prose-xl mx-auto bg-base-100 p-6 rounded-lg shadow-lg">
+        {/* Cover Image */}
+        <div className="mb-6">
           <img
             src={post.Image}
             alt={`Cover Image for ${post.title}`}
-            className="rounded-2x m-auto max-h-80"
+            className="rounded-lg mx-auto w-full object-cover max-h-80"
           />
         </div>
-        <div className="m-auto max-w-4xl">
-          <h1>{post.title}</h1>
-          <div className="flex justify-end space-x-2">
-            <time
-              dateTime={post.datePublished}
-              className="mb-6 text-sm text-neutral-200"
-            >
-              {datePublished}
+        {/* Title */}
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-primary mb-4">{post.title}</h1>
+          <div className="flex justify-center space-x-4 text-sm text-neutral-content">
+            <time dateTime={post.datePublished}>
+              Published: {datePublished}
             </time>
-            <time
-              dateTime={post.datePublished}
-              className="mb-6 text-sm text-neutral-200"
-            >
-              {dateModified}
-            </time>
+            <time dateTime={post.dateModified}>Updated: {dateModified}</time>
           </div>
-          <div
-            className="mx-auto whitespace-pre-wrap"
-            dangerouslySetInnerHTML={{
-              __html: content.replace(
-                /<a /g,
-                '<a class="text-blue-500 hover:underline" '
-              ),
-            }}
-          />
         </div>
+        {/* Content */}
+        <div
+          className="mt-6"
+          dangerouslySetInnerHTML={{
+            __html: content.replace(
+              /<a /g,
+              '<a class="text-blue-500 hover:underline" '
+            ),
+          }}
+        />
       </article>
     </main>
   );

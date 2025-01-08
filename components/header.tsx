@@ -19,91 +19,81 @@ export default function Header() {
   };
 
   return (
-    <nav className="bg-background/75 sticky top-0 z-40 mb-8 rounded-b-2xl bg-neutral-900 shadow-xl backdrop-blur">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center">
-          {/* Mobile Menu Button */}
-          <div className="mr-2 flex items-center md:hidden">
-            <button
-              onClick={handleMenuToggle}
-              className="inline-flex items-center justify-center p-2 text-neutral-200 focus:outline-none focus:ring-2 focus:ring-inset"
-            >
-              <span className="sr-only">
-                {isMobileMenuOpen ? "Close main menu" : "Open main menu"}
-              </span>
-              {isMobileMenuOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
-            </button>
-          </div>
+    <nav className="navbar sticky top-0 z-40 mb-8 bg-base-200 shadow-lg">
+      <div className="container mx-auto">
+        <div className="flex-1">
+          {/* Logo Section */}
+          <Link href="/" className="flex items-center space-x-2">
+            <img
+              src="/favicon.ico"
+              alt="Portfolio"
+              className=" h-10 w-10 rounded-full"
+            />
+            <span className="text-xl font-bold text-primary">PORTFOLIO</span>
+          </Link>
+        </div>
 
-          {/* Centered Logo / Brand for Small Screens */}
-          <div className="-ml-14 flex flex-1 justify-center md:m-0 md:justify-start">
-            <Link href="/" className="flex items-center">
-              <img
-                src="/favicon.ico"
-                alt="HoYoSmash"
-                width={36}
-                height={36}
-                className="hidden rounded-full md:flex"
-              />
-              <span className="ml-3 text-lg font-bold text-red-600">
-                PORTFOLIO
-              </span>
-            </Link>
-          </div>
-
-          {/* Center Section (hidden on small screens) */}
-          <div className="hidden flex-1 items-center justify-center space-x-4 md:flex">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`px-3 py-2 text-xs lg:text-sm xl:lg:text-base ${
-                  pathname === item.href
-                    ? "text-red-600"
-                    : "text-neutral-200 hover:text-red-600"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* End Section */}
-          <div className="hidden flex-1 items-center justify-end md:flex">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-4">
+          {navigation.map((item) => (
             <Link
-              href="/contact"
-              className="px-3 py-2 text-sm font-medium text-neutral-200 hover:text-red-600"
+              key={item.name}
+              href={item.href}
+              className={`btn btn-ghost text-sm ${
+                pathname === item.href
+                  ? "text-primary font-bold"
+                  : "text-base-content"
+              }`}
             >
-              <button className="bg-red-500 font-medium text-neutral-200 shadow-md transition hover:bg-red-600">
-                CONTACT
-              </button>
+              {item.name}
             </Link>
-          </div>
+          ))}
+        </div>
+
+        {/* Contact Button */}
+        <div className="hidden md:flex ml-10">
+          <Link href="/contact">
+            <button className="btn btn-primary">CONTACT</button>
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={handleMenuToggle}
+            className="btn btn-ghost btn-square"
+          >
+            <span className="sr-only">
+              {isMobileMenuOpen ? "Close main menu" : "Open main menu"}
+            </span>
+            {isMobileMenuOpen ? (
+              <XMarkIcon className="h-6 w-6" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" />
+            )}
+          </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="bg-background/75 absolute z-50 w-full rounded-2xl bg-neutral-900 p-2 backdrop-blur md:hidden">
-          <div className="space-y-1 px-2 pb-3 pt-2">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`block px-3 py-2 text-sm font-medium ${
-                  pathname === item.href
-                    ? "text-red-600"
-                    : "text-neutral-200 hover:text-red-600"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+        <div className="menu bg-base-200 absolute top-full left-0 w-full shadow-md md:hidden">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className={`block px-4 py-2 text-sm ${
+                pathname === item.href
+                  ? "text-primary font-bold"
+                  : "text-base-content"
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Link href="/contact">
+            <button className="btn btn-primary w-full mt-2">CONTACT</button>
+          </Link>
         </div>
       )}
     </nav>

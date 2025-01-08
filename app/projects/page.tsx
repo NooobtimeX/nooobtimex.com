@@ -16,6 +16,11 @@ export default function Project() {
       id: "TAILWIND CSS",
       imgSrc: "/icon/tailwindcss.png",
     },
+    {
+      name: "DAISY UI",
+      id: "DAISY UI",
+      imgSrc: "/icon/daisyui.png",
+    },
     { name: "NUXT JS", id: "NUXT JS", imgSrc: "/icon/nuxtjs.png" },
     { name: "VERCEL", id: "VERCEL", imgSrc: "/icon/vercel.png" },
     { name: "SUPABASE", id: "SUPABASE", imgSrc: "/icon/supabase.png" },
@@ -99,91 +104,75 @@ export default function Project() {
   });
 
   return (
-    <div>
+    <div className="bg-base-200 py-8">
       <Head>
         <link rel="canonical" href="https://nooobtimex.me/projects" />
       </Head>
-      <div className="rounded-2xl bg-neutral-900 text-white" id="project">
-        <h1 className="md:mb-10">PROJECTS</h1>
-        <div className="flex items-center justify-center">
-          <button
-            onClick={toggleFilter}
-            className="-mt-8 mb-4 hidden aspect-square p-2 md:inline-block"
-          >
-            <IoFilterSharp size={24} />
+      <div className="container mx-auto max-w-7xl">
+        <h1 className="text-center text-4xl font-bold text-primary mb-8">
+          PROJECTS
+        </h1>
+        {/* Filter Button */}
+        <div className="flex justify-center" onClick={toggleFilter}>
+          <button className="fixed bottom-4 left-1/2 transform -translate-x-1/2 aspect-square rounded-full w-full max-w-[350px] bg-primary p-4 shadow-lg hover:bg-primary-focus z-50 flex items-center justify-center">
+            <IoFilterSharp size={24} className="-mt-1" />
           </button>
         </div>
-        <div className="flex flex-wrap justify-center gap-8">
+
+        {/* Project Cards */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item) => (
             <div
               key={item.name}
-              className="w-full max-w-md transform overflow-hidden rounded-2xl bg-neutral-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl md:w-1/3 xl:w-1/4"
+              className="card bg-base-100 shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
             >
-              <div className="relative">
+              <figure>
                 <a href={item.href} target="_blank" rel="noopener noreferrer">
                   <img
                     src={item.imgSrc}
                     alt={item.name}
-                    className="h-48 w-full rounded-t-2xl object-cover"
+                    className="w-full rounded-t-lg object-cover"
                   />
                 </a>
-              </div>
-              <div className="p-2">
-                <h2 className="text-center text-2xl font-semibold">
-                  {item.name}
-                </h2>
-                <div className="text-center text-sm text-neutral-200">
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title text-primary">{item.name}</h2>
+                <p className="text-sm text-neutral-content">
                   {item.skills.join(", ")}
-                </div>
+                </p>
               </div>
             </div>
           ))}
         </div>
-        <button
-          onClick={toggleFilter}
-          className="fixed bottom-4 right-4 aspect-square rounded-full bg-red-700 p-2 hover:bg-red-700 md:hidden"
-        >
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/icon%2Ffilter.png?alt=media&token=daac11a2-de56-46c7-aafe-5ca7260aa0a6"
-            alt="Filter"
-          />
-        </button>
-
+        {/* Filter Modal */}
         {isFilterOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-900 bg-opacity-50">
-            <div className="w-96 rounded-2xl bg-neutral-900 p-6">
-              <p className="mb-4 text-center text-2xl text-red-600">FILTER</p>
-              <div className="space-y-4">
-                <div>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill) => (
-                      <div
-                        key={skill.id}
-                        onClick={() => handleSkillChange(skill.id)}
-                        className={`flex cursor-pointer items-center gap-2 rounded-2xl p-2 transition-colors duration-300 ${
-                          selectedSkills.includes(skill.id)
-                            ? "bg-red-600"
-                            : "bg-transparent"
-                        }`}
-                      >
-                        <img
-                          src={skill.imgSrc}
-                          alt={skill.name}
-                          className="h-5 w-5"
-                        />
-                        <span className="text-sm text-neutral-200">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
+          <div className="modal modal-open">
+            <div className="modal-box bg-base-100 shadow-xl">
+              <h3 className="text-2xl font-bold text-primary mb-4 text-center">
+                FILTER
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {skills.map((skill) => (
+                  <div
+                    key={skill.id}
+                    onClick={() => handleSkillChange(skill.id)}
+                    className={`badge badge-lg cursor-pointer py-4 px-3 ${
+                      selectedSkills.includes(skill.id)
+                        ? "badge-primary"
+                        : "badge-outline"
+                    }`}
+                  >
+                    <img
+                      src={skill.imgSrc}
+                      alt={skill.name}
+                      className="h-5 w-5 mr-2"
+                    />
+                    {skill.name}
                   </div>
-                </div>
+                ))}
               </div>
-              <div className="mt-6 flex justify-center space-x-4">
-                <button
-                  className="bg-red-700 px-4 py-2 text-neutral-200 hover:bg-red-700"
-                  onClick={toggleFilter}
-                >
+              <div className="modal-action">
+                <button className="btn btn- w-full" onClick={toggleFilter}>
                   Close
                 </button>
               </div>

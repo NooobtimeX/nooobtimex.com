@@ -5,6 +5,7 @@ const skills = [
   { imgSrc: "/icon/vuejs.png", name: "Vue.js" },
   { imgSrc: "/icon/tailwindcss.png", name: "Tailwind CSS" },
   { imgSrc: "/icon/prisma.png", name: "Prisma" },
+  { imgSrc: "/icon/drizzle.png", name: "Drizzle" },
   { imgSrc: "/icon/sqlite.png", name: "SQLite" },
   { imgSrc: "/icon/postgresql.png", name: "PostgreSQL" },
   { imgSrc: "/icon/mysql.png", name: "MySQL" },
@@ -18,22 +19,27 @@ const skills = [
 export default function Skill() {
   return (
     <div>
-      <div className="flex flex-col items-center text-white" id="skill">
-        <h2 className="mb-2 text-center text-4xl font-bold">Skills</h2>
-        <div className="flex flex-wrap justify-center gap-3 max-w-4xl">
+      <div
+        className="flex flex-col items-center text-base-content bg-base-200 py-12"
+        id="skill"
+      >
+        <h2 className="mb-6 text-4xl font-bold text-primary">Skills</h2>
+        <div className="flex flex-wrap justify-center gap-6 max-w-4xl">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="group relative flex h-16 w-16 transform flex-col items-center justify-center rounded-2xl text-neutral-200 md:h-20 md:w-20 xl:h-24 xl:w-24"
+              className="group card bg-base-100 shadow-md rounded-lg hover:shadow-lg hover:scale-105 transition-transform duration-300"
             >
-              <img
-                src={skill.imgSrc}
-                alt={skill.name}
-                className="h-10 w-10 md:h-14 md:w-14 xl:h-20 xl:w-20"
-              />
-              <label className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:cursor-pointer group-hover:opacity-100">
-                {skill.name}
-              </label>
+              <div className="card-body items-center p-4">
+                <img
+                  src={skill.imgSrc}
+                  alt={skill.name}
+                  className="h-14 w-14 md:h-20 md:w-20"
+                />
+                <div className="card-overlay absolute inset-0 flex items-center rounded-lg justify-center bg-black bg-opacity-70 text-neutral-content opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="text-lg font-bold">{skill.name}</span>
+                </div>
+              </div>
             </div>
           ))}
         </div>

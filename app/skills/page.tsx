@@ -39,22 +39,26 @@ interface SkillGroupProps {
 }
 
 const SkillGroup = ({ title, skillList }: SkillGroupProps) => (
-  <div className="skill-group">
-    <h2 className="text-center text-2xl font-bold mb-4">{title}</h2>
-    <div className="flex flex-wrap justify-center gap-2 mx-auto">
+  <div className="p-6 my-6">
+    <h2 className="text-center text-2xl font-bold text-primary mb-4">
+      {title}
+    </h2>
+    <div className="flex flex-wrap justify-center gap-4">
       {skillList.map((skill, index) => (
         <div
           key={index}
-          className="group relative flex h-14 w-14 md:h-20 md:w-20 xl:h-24 xl:w-24 items-center justify-center rounded-2xl transform hover:scale-110 transition-transform duration-300"
+          className="group card bg-base-100 shadow-md rounded-lg hover:shadow-lg hover:scale-105 transition-transform duration-300"
         >
-          <img
-            src={skill.imgSrc}
-            alt={skill.name}
-            className="md:h-14 md:w-14 xl:h-20 xl:w-20"
-          />
-          <label className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:opacity-100">
-            {skill.name}
-          </label>
+          <div className="card-body items-center p-4">
+            <img
+              src={skill.imgSrc}
+              alt={skill.name}
+              className="h-14 w-14 md:h-20 md:w-20"
+            />
+            <div className="card-overlay absolute inset-0 flex items-center rounded-lg justify-center bg-black bg-opacity-70 text-neutral-content opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <span className="text-lg font-bold">{skill.name}</span>
+            </div>
+          </div>
         </div>
       ))}
     </div>
@@ -63,12 +67,14 @@ const SkillGroup = ({ title, skillList }: SkillGroupProps) => (
 
 export default function Skill() {
   return (
-    <div>
+    <div className="bg-base-200 py-12">
       <Head>
         <link rel="canonical" href="https://nooobtimex.me/skills" />
       </Head>
-      <h1>SKILLS</h1>
-      <div className="max-w-7xl mx-auto gap-8">
+      <div className="max-w-7xl mx-auto px-4">
+        <h1 className="text-center text-4xl font-bold text-primary mb-12">
+          SKILLS
+        </h1>
         <SkillGroup
           title="Programming Languages"
           skillList={skills.Programming}

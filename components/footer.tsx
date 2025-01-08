@@ -1,11 +1,3 @@
-const contacts = [
-  { name: "nooobtimex@gmail.com", url: "mailto:nooobtimex@gmail.com" },
-  {
-    name: "https://www.facebook.com/xnooobtime",
-    url: "https://www.facebook.com/xnooobtime",
-  },
-];
-
 const contents = [
   { name: "SKILLS", url: "/skills" },
   { name: "PROJECTS", url: "/projects" },
@@ -13,7 +5,13 @@ const contents = [
   { name: "POSTS", url: "/posts" },
 ];
 
-const projects = [
+const clientprojects = [
+  { name: "RS TROPHY", url: "https://www.rs-trophy.com/" },
+  { name: "RS MEDAL", url: "https://www.rs-medal.com/" },
+  { name: "RS AWARD", url: "https://www.rs-award.com/" },
+  { name: "RS RIBBON", url: "https://www.rs-ribbon.com/" },
+];
+const personalprojects = [
   { name: "QR FOOD", url: "https://github.com/NooobtimeX/QR-Food" },
   { name: "Combo Maker", url: "https://combomaker.net/" },
   { name: "HoyoSmash", url: "https://hoyosmash.com/" },
@@ -21,53 +19,43 @@ const projects = [
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 py-12 text-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <footer className="bg-base-200 py-12 text-base-content">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          {/* Company Mission */}
+          {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2">
-              {/* Logo Placeholder */}
               <img
                 src="/favicon.ico"
-                alt="HoYoSmash"
+                alt="NooobtimeX"
                 width="36"
                 height="36"
                 className="rounded-full"
               />
-              <span className="text-lg font-bold text-red-600">NooobtimeX</span>
+              <span className="text-lg font-bold text-primary">NooobtimeX</span>
             </div>
             <p className="mt-4 text-sm">
               Passionate about turning ideas into seamless digital experiences.
             </p>
             <div className="mt-4 flex space-x-4">
-              <a href="#" className="text-neutral-200 hover:text-white">
+              <a
+                href="https://www.facebook.com/xnooobtime"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base-content hover:text-primary"
+              >
                 <span className="sr-only">Facebook</span>
-                <svg
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Facebook Icon */}
-                </svg>
+                <i className="fab fa-facebook-f h-5 w-5"></i>
               </a>
-              <a href="#" className="text-neutral-200 hover:text-white">
+              <a href="#" className="text-base-content hover:text-primary">
                 <span className="sr-only">Instagram</span>
-                <svg
-                  className="h-5 w-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Instagram Icon */}
-                </svg>
+                <i className="fab fa-instagram h-5 w-5"></i>
               </a>
-              {/* Add more icons as needed */}
             </div>
           </div>
+          {/* Content Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-200">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary">
               CONTENT
             </h3>
             <ul className="mt-4 space-y-2">
@@ -75,7 +63,7 @@ export default function Footer() {
                 <li key={index}>
                   <a
                     href={content.url}
-                    className="text-neutral-200 hover:text-red-500"
+                    className="text-base-content hover:text-primary"
                   >
                     {content.name}
                   </a>
@@ -83,43 +71,45 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+          {/* Contact Links */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-200">
-              CONTACT
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary">
+              CLIENT WORK
             </h3>
             <ul className="mt-4 space-y-2">
-              {contacts.map((contact, index) => (
+              {clientprojects.map((clientproject, index) => (
                 <li key={index}>
                   <a
-                    href={contact.url}
-                    className="text-neutral-200 hover:text-red-500"
+                    href={clientproject.url}
+                    className="text-base-content hover:text-primary"
                   >
-                    {contact.name}
+                    {clientproject.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
+          {/* Highlight Projects */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-200">
-              HIGHTLIGHT PROJECT
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-primary">
+              PERSONAL WORK
             </h3>
             <ul className="mt-4 space-y-2">
-              {projects.map((project, index) => (
+              {personalprojects.map((personalproject, index) => (
                 <li key={index}>
                   <a
-                    href={project.url}
-                    className="text-neutral-200 hover:text-red-500"
+                    href={personalproject.url}
+                    className="text-base-content hover:text-primary"
                   >
-                    {project.name}
+                    {personalproject.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="mt-8 border-t border-neutral-700 pt-8">
-          <p className="text-center text-sm text-neutral-200">
+        <div className="mt-8 border-t border-base-300 pt-8">
+          <p className="text-center text-sm">
             © 2025 NooobtimeX. All rights reserved.
           </p>
         </div>
