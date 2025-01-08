@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import { useState } from "react";
+import { IoFilterSharp } from "react-icons/io5";
 import {
   SiFirebase,
   SiNextdotjs,
@@ -113,12 +114,9 @@ export default function Project() {
         <div className="flex items-center justify-center">
           <button
             onClick={toggleFilter}
-            className="-mt-8 mb-4 hidden aspect-square rounded-full bg-red-700 p-2 hover:bg-red-700 md:inline-block"
+            className="-mt-8 mb-4 hidden aspect-square p-2 md:inline-block"
           >
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/icon%2Ffilter.png?alt=media&token=daac11a2-de56-46c7-aafe-5ca7260aa0a6"
-              alt="Filter"
-            />
+            <IoFilterSharp size={24} />
           </button>
         </div>
         <div className="flex flex-wrap justify-center gap-8">
