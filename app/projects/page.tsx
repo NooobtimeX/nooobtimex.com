@@ -3,30 +3,24 @@
 import Head from "next/head";
 import { useState } from "react";
 import { IoFilterSharp } from "react-icons/io5";
-import {
-  SiFirebase,
-  SiNextdotjs,
-  SiNuxtdotjs,
-  SiSupabase,
-  SiTailwindcss,
-  SiVercel,
-  SiWoocommerce,
-  SiWordpress,
-} from "react-icons/si";
 
 export default function Project() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   const skills = [
-    { name: "NEXT JS", id: "NEXT JS", icon: SiNextdotjs },
-    { name: "FIREBASE", id: "FIREBASE", icon: SiFirebase },
-    { name: "TAILWIND CSS", id: "TAILWIND CSS", icon: SiTailwindcss },
-    { name: "NUXT JS", id: "NUXT JS", icon: SiNuxtdotjs },
-    { name: "VERCEL", id: "VERCEL", icon: SiVercel },
-    { name: "SUPABASE", id: "SUPABASE", icon: SiSupabase },
-    { name: "WORDPRESS", id: "WORDPRESS", icon: SiWordpress },
-    { name: "WOOCOMMERCE", id: "WOOCOMMERCE", icon: SiWoocommerce },
+    { name: "NEXT JS", id: "NEXT JS", imgSrc: "/icon/nextjs.png" },
+    { name: "FIREBASE", id: "FIREBASE", imgSrc: "/icon/firebase.png" },
+    {
+      name: "TAILWIND CSS",
+      id: "TAILWIND CSS",
+      imgSrc: "/icon/tailwindcss.png",
+    },
+    { name: "NUXT JS", id: "NUXT JS", imgSrc: "/icon/nuxtjs.png" },
+    { name: "VERCEL", id: "VERCEL", imgSrc: "/icon/vercel.png" },
+    { name: "SUPABASE", id: "SUPABASE", imgSrc: "/icon/supabase.png" },
+    { name: "WORDPRESS", id: "WORDPRESS", imgSrc: "/icon/wordpress.png" },
+    { name: "WOOCOMMERCE", id: "WOOCOMMERCE", imgSrc: "/icon/woocommerce.png" },
   ];
 
   const items = [
@@ -172,7 +166,11 @@ export default function Project() {
                             : "bg-transparent"
                         }`}
                       >
-                        <skill.icon size={20} className="text-neutral-200" />
+                        <img
+                          src={skill.imgSrc}
+                          alt={skill.name}
+                          className="h-5 w-5"
+                        />
                         <span className="text-sm text-neutral-200">
                           {skill.name}
                         </span>

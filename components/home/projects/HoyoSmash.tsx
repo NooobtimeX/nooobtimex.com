@@ -1,21 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import {
-  SiFirebase,
-  SiJavascript,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
 
 export default function HoyoSmash() {
   const skills = [
-    { name: "NEXT JS", icon: SiNextdotjs },
-    { name: "Tailwind CSS", icon: SiTailwindcss },
-    { name: "Javascript", icon: SiJavascript },
-    { name: "Typescript", icon: SiTypescript },
-    { name: "FIREBASE", icon: SiFirebase },
+    { name: "NEXT JS", imgSrc: "/icon/nextjs.png" },
+    { name: "Tailwind CSS", imgSrc: "/icon/tailwindcss.png" },
+    { name: "Javascript", imgSrc: "/icon/javascript.png" },
+    { name: "Typescript", imgSrc: "/icon/typescript.png" },
+    { name: "FIREBASE", imgSrc: "/icon/firebase.png" },
   ];
 
   return (
@@ -51,7 +44,11 @@ export default function HoyoSmash() {
                   key={index}
                   className="group relative flex h-14 w-14 transform flex-col items-center justify-center rounded-2xl text-neutral-200 md:h-20 md:w-20 xl:h-24 xl:w-24"
                 >
-                  <skill.icon size={40} className="text-neutral-200" />
+                  <img
+                    src={skill.imgSrc}
+                    alt={skill.name}
+                    className="h-10 w-10 md:h-14 md:w-14 xl:h-20 xl:w-20"
+                  />
                   <label className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:cursor-pointer group-hover:opacity-100">
                     {skill.name}
                   </label>

@@ -1,78 +1,35 @@
 import Head from "next/head";
-import { CgMonday } from "react-icons/cg";
-import {
-  SiBootstrap,
-  SiClickup,
-  SiCss3,
-  SiDaisyui,
-  SiDrizzle,
-  SiFirebase,
-  SiGit,
-  SiGithub,
-  SiGithubcopilot,
-  SiGitlab,
-  SiGooglegemini,
-  SiJavascript,
-  SiMysql,
-  SiNextdotjs,
-  SiNuxtdotjs,
-  SiOpenai,
-  SiPlesk,
-  SiPostgresql,
-  SiPrisma,
-  SiReact,
-  SiSqlite,
-  SiSupabase,
-  SiTailwindcss,
-  SiTrello,
-  SiTypescript,
-  SiVercel,
-  SiVuedotjs,
-} from "react-icons/si";
 
 const skills = {
   Frontend: [
-    { icon: SiNextdotjs, name: "Next.js" },
-    { icon: SiNuxtdotjs, name: "Nuxt.js" },
-    { icon: SiReact, name: "React" },
-    { icon: SiVuedotjs, name: "Vue.js" },
-    { icon: SiTailwindcss, name: "Tailwind CSS" },
-    { icon: SiBootstrap, name: "Bootstrap" },
-    { icon: SiDaisyui, name: "DaisyUI" },
-    { icon: SiCss3, name: "CSS3" },
+    { imgSrc: "/icon/nextjs.png", name: "Next.js" },
+    { imgSrc: "/icon/nuxtjs.png", name: "Nuxt.js" },
+    { imgSrc: "/icon/react.png", name: "React" },
+    { imgSrc: "/icon/vuejs.png", name: "Vue.js" },
+    { imgSrc: "/icon/tailwindcss.png", name: "Tailwind CSS" },
+    { imgSrc: "/icon/bootstrap.png", name: "Bootstrap" },
+    { imgSrc: "/icon/daisyui.png", name: "DaisyUI" },
   ],
   Backend: [
-    { icon: SiPrisma, name: "Prisma" },
-    { icon: SiDrizzle, name: "Drizzle" },
-    { icon: SiSqlite, name: "SQLite" },
-    { icon: SiPostgresql, name: "PostgreSQL" },
-    { icon: SiMysql, name: "MySQL" },
+    { imgSrc: "/icon/prisma.png", name: "Prisma" },
+    { imgSrc: "/icon/drizzle.png", name: "Drizzle" },
+    { imgSrc: "/icon/sqlite.png", name: "SQLite" },
+    { imgSrc: "/icon/postgresql.png", name: "PostgreSQL" },
+    { imgSrc: "/icon/mysql.png", name: "MySQL" },
   ],
   Deployment: [
-    { icon: SiVercel, name: "Vercel" },
-    { icon: SiFirebase, name: "Firebase" },
-    { icon: SiSupabase, name: "Supabase" },
-    { icon: SiPlesk, name: "Plesk" },
+    { imgSrc: "/icon/vercel.png", name: "Vercel" },
+    { imgSrc: "/icon/firebase.png", name: "Firebase" },
+    { imgSrc: "/icon/supabase.png", name: "Supabase" },
   ],
   Programming: [
-    { icon: SiJavascript, name: "Javascript" },
-    { icon: SiTypescript, name: "Typescript" },
-  ],
-  Tools: [
-    { icon: SiGit, name: "Git" },
-    { icon: SiGithub, name: "Github" },
-    { icon: SiGitlab, name: "Gitlab" },
-    { icon: SiClickup, name: "Clickup" },
-    { icon: CgMonday, name: "Monday" },
-    { icon: SiTrello, name: "Trello" },
-    { icon: SiGooglegemini, name: "Gemini" },
-    { icon: SiGithubcopilot, name: "Copilot" },
-    { icon: SiOpenai, name: "Chat GPT" },
+    { imgSrc: "/icon/javascript.png", name: "Javascript" },
+    { imgSrc: "/icon/typescript.png", name: "Typescript" },
   ],
 };
 
 interface Skill {
-  icon: React.ElementType;
+  imgSrc: string;
   name: string;
 }
 
@@ -90,7 +47,11 @@ const SkillGroup = ({ title, skillList }: SkillGroupProps) => (
           key={index}
           className="group relative flex h-14 w-14 md:h-20 md:w-20 xl:h-24 xl:w-24 items-center justify-center rounded-2xl transform hover:scale-110 transition-transform duration-300"
         >
-          <skill.icon size={40} className="text-neutral-200" />
+          <img
+            src={skill.imgSrc}
+            alt={skill.name}
+            className="md:h-14 md:w-14 xl:h-20 xl:w-20"
+          />
           <label className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:opacity-100">
             {skill.name}
           </label>
@@ -115,7 +76,6 @@ export default function Skill() {
         <SkillGroup title="Frontend" skillList={skills.Frontend} />
         <SkillGroup title="Backend" skillList={skills.Backend} />
         <SkillGroup title="Deployment" skillList={skills.Deployment} />
-        <SkillGroup title="Tools" skillList={skills.Tools} />
       </div>
     </div>
   );

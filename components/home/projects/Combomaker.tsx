@@ -1,21 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import {
-  SiFirebase,
-  SiJavascript,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
 
 export default function Combomaker() {
   const skills = [
-    { icon: SiNextdotjs, name: "NEXT JS" },
-    { icon: SiTailwindcss, name: "Tailwind CSS" },
-    { icon: SiJavascript, name: "Javascript" },
-    { icon: SiTypescript, name: "Typescript" },
-    { icon: SiFirebase, name: "FIREBASE" },
+    { imgSrc: "/icon/nextjs.png", name: "NEXT JS" },
+    { imgSrc: "/icon/tailwindcss.png", name: "Tailwind CSS" },
+    { imgSrc: "/icon/javascript.png", name: "Javascript" },
+    { imgSrc: "/icon/typescript.png", name: "Typescript" },
+    { imgSrc: "/icon/firebase.png", name: "FIREBASE" },
   ];
 
   return (
@@ -32,7 +25,11 @@ export default function Combomaker() {
                   key={index}
                   className="group relative flex h-14 w-14 transform flex-col items-center justify-center rounded-2xl md:h-20 md:w-20 xl:h-24 xl:w-24"
                 >
-                  <skill.icon size={40} className="text-neutral-200" />
+                  <img
+                    src={skill.imgSrc}
+                    alt={skill.name}
+                    className="h-10 w-10 md:h-14 md:w-14 xl:h-20 xl:w-20"
+                  />
                   <label className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-200 opacity-0 transition-opacity duration-300 hover:cursor-pointer group-hover:opacity-100">
                     {skill.name}
                   </label>
