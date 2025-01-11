@@ -5,13 +5,11 @@ export default function HeroSection() {
     <div className="hero min-h-screen bg-base-200 text-base-content">
       <div className="hero-content text-center">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold md:text-6xl">
-            <span className="text-primary">WEB DEV Portfolio</span>
-          </h1>
+          <h1 className="text-4xl font-bold md:text-6xl">WEB DEV Portfolio</h1>
           <p className="mt-4 text-lg md:text-xl">
             Passionate about turning ideas into seamless digital experiences. I
             specialize in modern web development with frameworks like{" "}
-            <span className="text-primary">NEXT JS</span>.
+            <em>NEXT JS</em>.
           </p>
           <div className="mt-8 flex justify-center space-x-4">
             <Link href="/projects">

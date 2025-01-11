@@ -28,13 +28,13 @@ export default async function Post(props: Params) {
   return (
     <main className="container mx-auto px-4 py-8 bg-base-200">
       <link rel="canonical" href={"https://hoyosmash.com/" + params.slug} />
-      <article className="prose lg:prose-xl mx-auto bg-base-100 p-6 rounded-lg shadow-lg">
+      <article className="prose lg:prose-xl mx-auto p-6 rounded-2xl shadow-lg">
         {/* Cover Image */}
         <div className="mb-6">
           <img
             src={post.Image}
             alt={`Cover Image for ${post.title}`}
-            className="rounded-lg mx-auto w-full object-cover max-h-80"
+            className=" mx-auto w-full object-cover max-h-80"
           />
         </div>
         {/* Title */}

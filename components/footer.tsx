@@ -32,7 +32,7 @@ export default function Footer() {
                 height="36"
                 className="rounded-full"
               />
-              <span className="text-lg font-bold text-primary">NooobtimeX</span>
+              <em className="text-lg font-bold">NooobtimeX</em>
             </div>
             <p className="mt-4 text-sm">
               Passionate about turning ideas into seamless digital experiences.
@@ -44,11 +44,11 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-base-content hover:text-primary"
               >
-                <span className="sr-only">Facebook</span>
+                <em className="sr-only">Facebook</em>
                 <i className="fab fa-facebook-f h-5 w-5"></i>
               </a>
               <a href="#" className="text-base-content hover:text-primary">
-                <span className="sr-only">Instagram</span>
+                <em className="sr-only">Instagram</em>
                 <i className="fab fa-instagram h-5 w-5"></i>
               </a>
             </div>

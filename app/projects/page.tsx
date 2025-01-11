@@ -34,7 +34,7 @@ export default function Project() {
       imgSrc:
         "https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2FPorfolio.png?alt=media&token=031b0177-b71d-47f0-aabe-dcfa01677a15",
       name: "Porfolio",
-      skills: ["NEXT JS", "FIREBASE", "TAILWIND CSS"],
+      skills: ["NEXT JS", "FIREBASE", "TAILWIND CSS", "DAISY UI"],
     },
     {
       href: "https://github.com/NooobtimeX/QR-Food",
@@ -113,10 +113,12 @@ export default function Project() {
           PROJECTS
         </h1>
         {/* Filter Button */}
-        <div className="flex justify-center" onClick={toggleFilter}>
-          <button className="fixed bottom-4 left-1/2 transform -translate-x-1/2 aspect-square rounded-full w-full max-w-[350px] bg-primary p-4 shadow-lg hover:bg-primary-focus z-50 flex items-center justify-center">
-            <IoFilterSharp size={24} className="-mt-1" />
-          </button>
+        <div
+          className="fixed bottom-4 left-1/2 transform -translate-x-1/2 aspect-square rounded-full w-full max-h-10 max-w-52 bg-primary text-white p-4 shadow-lg hover:bg-primary-focus focus:ring-4 focus:ring-primary/50 z-50 flex items-center justify-center transition-all duration-200"
+          onClick={toggleFilter}
+          aria-label="Toggle Filter"
+        >
+          <IoFilterSharp size="1.5em" className="pointer-events-none" />
         </div>
 
         {/* Project Cards */}
@@ -131,7 +133,7 @@ export default function Project() {
                   <img
                     src={item.imgSrc}
                     alt={item.name}
-                    className="w-full rounded-t-lg object-cover"
+                    className="w-full rounded-2xl object-cover"
                   />
                 </a>
               </figure>

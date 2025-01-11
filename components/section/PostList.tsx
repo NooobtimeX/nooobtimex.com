@@ -25,7 +25,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
                 <img
                   src={post.Image}
                   alt={`Cover image for ${post.title}`}
-                  className="rounded-t-xl object-cover"
+                  className="rounded-2xl object-cover"
                   width={600}
                   height={200}
                 />

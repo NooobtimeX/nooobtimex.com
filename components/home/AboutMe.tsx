@@ -23,21 +23,18 @@ export default function AboutMe() {
         {/* About Me Content */}
         <div className="max-w-3xl">
           <h2 className="text-5xl font-bold text-primary">
-            Wongsaphat Puangsorn <span className="text-3xl">({age})</span>
+            Wongsaphat Puangsorn <em className="text-3xl">({age})</em>
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-base-content">
             I am a skilled software developer currently pursuing a degree in
-            <span className="font-semibold text-primary"> {bachelor}</span> at
-            <span className="font-semibold text-primary"> {university}</span>.
-            With expertise in both
-            <span className="font-semibold text-primary"> frontend </span> and
-            <span className="font-semibold text-primary"> backend </span>{" "}
-            development, I am proficient in
-            <span className="font-semibold text-primary">
-              {" "}
-              modern JavaScript frameworks
-            </span>
-            . I build robust web applications using the latest technologies.
+            <em className="font-semibold "> {bachelor}</em> at
+            <em className="font-semibold "> {university}</em>. With expertise in
+            both
+            <em className="font-semibold "> frontend </em> and
+            <em className="font-semibold "> backend </em> development, I am
+            proficient in
+            <em className="font-semibold"> modern JavaScript frameworks</em>. I
+            build robust web applications using the latest technologies.
           </p>
         </div>
       </div>

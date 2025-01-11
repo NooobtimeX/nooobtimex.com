@@ -61,9 +61,9 @@ export default function Contact() {
               </a>
               {detail.recommend && (
                 <div className="mt-4 flex items-center">
-                  <span className="badge badge-primary badge-outline">
+                  <em className="badge badge-primary badge-outline">
                     Recommended
-                  </span>
+                  </em>
                 </div>
               )}
             </div>

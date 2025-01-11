@@ -19,18 +19,18 @@ export default function Header() {
   };
 
   return (
-    <nav className="navbar sticky top-0 z-40 mb-8 bg-base-200 shadow-lg">
-      <div className="container mx-auto">
-        <div className="flex-1">
-          {/* Logo Section */}
-          <Link href="/" className="flex items-center space-x-2">
+    <nav className="navbar sticky top-0 z-40 mb-8 bg-base-200 shadow">
+      <div className="container mx-auto flex items-center justify-between">
+        {/* Logo Section */}
+        <div className="flex items-center space-x-2">
+          <Link href="/">
             <img
               src="/favicon.ico"
               alt="Portfolio"
-              className=" h-10 w-10 rounded-full"
+              className="h-10 w-10 rounded-full"
             />
-            <span className="text-xl font-bold text-primary">PORTFOLIO</span>
           </Link>
+          <em className="text-xl font-bold">PORTFOLIO</em>
         </div>
 
         {/* Desktop Navigation */}
@@ -39,11 +39,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className={`btn btn-ghost text-sm ${
-                pathname === item.href
-                  ? "text-primary font-bold"
-                  : "text-base-content"
-              }`}
+              className="btn btn-ghost text-sm "
             >
               {item.name}
             </Link>
@@ -51,27 +47,22 @@ export default function Header() {
         </div>
 
         {/* Contact Button */}
-        <div className="hidden md:flex ml-10">
-          <Link href="/contact">
-            <button className="btn btn-primary">CONTACT</button>
-          </Link>
-        </div>
+        <Link href="/contact" className="hidden md:flex ml-10">
+          <button className="btn btn-primary">CONTACT</button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button
-            onClick={handleMenuToggle}
-            className="btn btn-ghost btn-square"
-          >
-            <span className="sr-only">
+          <div onClick={handleMenuToggle} className="btn btn-ghost btn-square">
+            <em className="sr-only">
               {isMobileMenuOpen ? "Close main menu" : "Open main menu"}
-            </span>
+            </em>
             {isMobileMenuOpen ? (
               <XMarkIcon className="h-6 w-6" />
             ) : (
               <Bars3Icon className="h-6 w-6" />
             )}
-          </button>
+          </div>
         </div>
       </div>
 
@@ -82,11 +73,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className={`block px-4 py-2 text-sm ${
-                pathname === item.href
-                  ? "text-primary font-bold"
-                  : "text-base-content"
-              }`}
+              className="block px-4 py-2 text-sm "
             >
               {item.name}
             </Link>

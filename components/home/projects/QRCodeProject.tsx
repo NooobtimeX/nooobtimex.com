@@ -30,9 +30,9 @@ export default function QRCodeProject() {
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2FQRCODE.png?alt=media&token=916e4c43-724e-4e30-86c0-155ee8093da5"
                   alt="QR FOOD"
-                  className="w-full rounded-t-lg object-cover"
+                  className="w-full "
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-lg font-bold text-neutral-content opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-content opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   QR FOOD
                 </div>
               </Link>
@@ -49,21 +49,12 @@ export default function QRCodeProject() {
             <p className="text-center text-lg text-base-content">Skills</p>
             <div className="flex flex-wrap justify-center gap-4">
               {skills.map((skill, index) => (
-                <div
+                <img
                   key={index}
-                  className="group card bg-base-100 shadow-md rounded-lg hover:shadow-lg hover:scale-105 transition-transform duration-300"
-                >
-                  <div className="card-body items-center p-4">
-                    <img
-                      src={skill.imgSrc}
-                      alt={skill.name}
-                      className="h-14 w-14 md:h-20 md:w-20"
-                    />
-                    <div className="card-overlay absolute inset-0 flex items-center rounded-lg justify-center bg-black bg-opacity-70 text-neutral-content opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <span className="text-lg font-bold">{skill.name}</span>
-                    </div>
-                  </div>
-                </div>
+                  src={skill.imgSrc}
+                  alt={skill.name}
+                  className="h-14 w-14 md:h-20 md:w-20 group rounded-2xl hover:shadow-lg hover:scale-105 transition-transform duration-300"
+                />
               ))}
             </div>
           </div>
