@@ -16,7 +16,7 @@ export default function HoyoSmash() {
       {/* HoyoSmash Section */}
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
         {/* Image Section */}
-        <div className="order-2 m-auto md:order-1">
+        <div className="order-2 md:order-1 m-auto">
           <div className="card w-full bg-base-100 shadow-xl">
             <figure className="group relative">
               <Link
@@ -25,7 +25,7 @@ export default function HoyoSmash() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Fhoyosmash.png?alt=media&token=b38f2ff5-c441-4e3b-866a-a4ab32b6b903"
+                  src="/project/HoYoSmash.png"
                   alt="HoyoSmash"
                   className="w-full "
                 />

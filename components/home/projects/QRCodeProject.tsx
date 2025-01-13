@@ -28,7 +28,7 @@ export default function QRCodeProject() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2FQRCODE.png?alt=media&token=916e4c43-724e-4e30-86c0-155ee8093da5"
+                  src="/project/QRFOOD.png"
                   alt="QR FOOD"
                   className="w-full "
                 />
@@ -42,7 +42,7 @@ export default function QRCodeProject() {
 
         {/* Skills Section */}
         <div className="order-1 m-auto space-y-4 md:order-2">
-          <h3 className="text-center text-4xl font-bold text-primary">
+          <h3 className="text-center text-4xl font-bold text-primary m-auto">
             QR FOOD
           </h3>
           <div>

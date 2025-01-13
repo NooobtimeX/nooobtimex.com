@@ -16,7 +16,7 @@ export default function Combomaker() {
       {/* Combo Maker Section */}
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
         {/* Skills Section */}
-        <div className="space-y-6">
+        <div className="space-y-6 m-auto">
           <h3 className="text-center text-3xl font-bold text-primary">
             Combo Maker
           </h3>
@@ -37,7 +37,7 @@ export default function Combomaker() {
 
         {/* Image Section */}
         <div className="flex justify-center">
-          <div className="card w-full bg-base-100 shadow-xl">
+          <div className="card shadow-xl">
             <figure className="group relative">
               <Link
                 href="https://combomaker.net/"
@@ -45,7 +45,7 @@ export default function Combomaker() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/project_banner%2Fcombomaker.png?alt=media&token=eb2c155a-5f69-4d92-9e2a-a84fa8f5af13"
+                  src="/project/ComboMaker.png"
                   alt="Combo Maker"
                   className="w-full"
                 />
