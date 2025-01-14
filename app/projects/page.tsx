@@ -26,6 +26,17 @@ export default function Project() {
     { name: "SUPABASE", id: "SUPABASE", imgSrc: "/icon/supabase.png" },
     { name: "WORDPRESS", id: "WORDPRESS", imgSrc: "/icon/wordpress.png" },
     { name: "WOOCOMMERCE", id: "WOOCOMMERCE", imgSrc: "/icon/woocommerce.png" },
+    { name: "Google Ads", id: "Google Ads", imgSrc: "/icon/googleads.png" },
+    {
+      name: "Google Tagmanager",
+      id: "Google Tagmanager",
+      imgSrc: "/icon/googletagmanager.png",
+    },
+    {
+      name: "Google Analytics",
+      id: "Google Analytics",
+      imgSrc: "/icon/googleanalytics.png",
+    },
   ];
 
   const items = [
@@ -58,25 +69,49 @@ export default function Project() {
       href: "https://www.rs-trophy.com",
       imgSrc: "/project/RSTROPHY.png",
       name: "rs-trophy.com",
-      skills: ["WORDPRESS", "WOOCOMMERCE"],
-    },
-    {
-      href: "https://www.rs-medal.com",
-      imgSrc: "/project/RSTROPHY.png",
-      name: "rs-medal.com",
-      skills: ["WORDPRESS", "WOOCOMMERCE"],
+      skills: [
+        "WORDPRESS",
+        "WOOCOMMERCE",
+        "Google Ads",
+        "Google Tagmanager",
+        "Google Analytics",
+      ],
     },
     {
       href: "https://www.rs-award.com",
-      imgSrc: "/project/RSTROPHY.png",
+      imgSrc: "/project/RSAWARD.png",
       name: "rs-award.com",
-      skills: ["WORDPRESS", "WOOCOMMERCE"],
+      skills: [
+        "WORDPRESS",
+        "WOOCOMMERCE",
+        "Google Ads",
+        "Google Tagmanager",
+        "Google Analytics",
+      ],
+    },
+    {
+      href: "https://www.rs-medal.com",
+      imgSrc: "/project/RSMEDAL.png",
+      name: "rs-medal.com",
+      skills: [
+        "WORDPRESS",
+        "WOOCOMMERCE",
+        "Google Ads",
+        "Google Tagmanager",
+        "Google Analytics",
+      ],
     },
     {
       href: "https://www.rs-ribbon.com",
-      imgSrc: "/project/RSTROPHY.png",
+      imgSrc: "/project/RSRIBBON.png",
       name: "rs-ribbon.com",
-      skills: ["WORDPRESS", "WOOCOMMERCE"],
+      skills: [
+        "WORDPRESS",
+        "WOOCOMMERCE",
+        "Google Ads",
+        "Google Tagmanager",
+        "Google Analytics",
+      ],
     },
   ];
 

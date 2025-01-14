@@ -13,7 +13,7 @@ export default function AboutMe() {
         <div className="avatar">
           <div className="w-40 h-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/people_profile%2FNooobtimeX.webp?alt=media&token=2449a999-5b38-4e2d-a032-f295934d94e8"
+              src="/profile/NooobtimeX.webp"
               alt="Avatar"
               className="object-cover"
             />
