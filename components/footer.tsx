@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const contents = [
   { name: "SKILLS", url: "/skills" },
   { name: "PROJECTS", url: "/projects" },
@@ -25,7 +27,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2">
-              <img
+              <Image
                 src="/favicon.ico"
                 alt="NooobtimeX"
                 width="36"

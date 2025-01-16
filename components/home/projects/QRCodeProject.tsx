@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 export default function QRCodeProject() {
@@ -27,10 +28,12 @@ export default function QRCodeProject() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/project/QRFOOD.png"
                   alt="QR FOOD"
-                  className="w-full "
+                  className="w-full"
+                  width={1600}
+                  height={900}
                 />
                 <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black bg-opacity-70 text-lg font-bold text-neutral-content opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   QR FOOD
@@ -54,10 +57,12 @@ export default function QRCodeProject() {
                   className="tooltip tooltip-primary"
                   data-tip={skill.name}
                 >
-                  <img
+                  <Image
                     src={skill.imgSrc}
                     alt={skill.name}
-                    className="h-14 w-14 md:h-20 md:w-20 group rounded-2xl"
+                    className="md:h-20 md:w-20 group rounded-2xl"
+                    width={80}
+                    height={80}
                   />
                 </div>
               ))}

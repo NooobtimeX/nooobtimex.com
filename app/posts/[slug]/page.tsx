@@ -1,6 +1,7 @@
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { format, parseISO } from "date-fns";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 type Params = {
@@ -31,10 +32,12 @@ export default async function Post(props: Params) {
       <article className="prose lg:prose-xl mx-auto p-6 rounded-2xl shadow-lg">
         {/* Cover Image */}
         <div className="mb-6">
-          <img
+          <Image
             src={post.Image}
             alt={`Cover Image for ${post.title}`}
-            className=" mx-auto w-full object-cover max-h-80"
+            className=" mx-auto object-cover max-h-96"
+            width={1200}
+            height={800}
           />
         </div>
         {/* Title */}

@@ -1,4 +1,5 @@
 import { AgeFromDate } from "age-calculator";
+import Image from "next/image";
 
 export default function AboutMe() {
   const birthdate = new Date(2003, 3, 19); // April 19, 2003 (Note: Month is 0-indexed)
@@ -12,10 +13,12 @@ export default function AboutMe() {
         {/* Profile Image */}
         <div className="avatar">
           <div className="w-40 h-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-            <img
+            <Image
               src="/profile/NooobtimeX.webp"
               alt="Avatar"
               className="object-cover"
+              width={160}
+              height={160}
             />
           </div>
         </div>

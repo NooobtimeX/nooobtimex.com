@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 const skills = {
   Frontend: [
@@ -50,10 +51,12 @@ const SkillGroup = ({ title, skillList }: SkillGroupProps) => (
           className="tooltip tooltip-primary"
           data-tip={skill.name}
         >
-          <img
+          <Image
             src={skill.imgSrc}
             alt={skill.name}
-            className="h-14 w-14 md:h-20 md:w-20 group rounded-2xl"
+            className="md:h-20 md:w-20 group rounded-2xl"
+            width={80}
+            height={80}
           />
         </div>
       ))}

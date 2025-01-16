@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const skills = [
   { imgSrc: "/icon/nextjs.png", name: "Next.js" },
   { imgSrc: "/icon/nuxtjs.png", name: "Nuxt.js" },
@@ -31,10 +33,12 @@ export default function Skill() {
               className="tooltip tooltip-primary"
               data-tip={skill.name}
             >
-              <img
+              <Image
                 src={skill.imgSrc}
                 alt={skill.name}
-                className="h-14 w-14 md:h-20 md:w-20 group rounded-2xl dow-lg"
+                className="md:h-20 md:w-20 group rounded-2xl dow-lg"
+                width={80}
+                height={80}
               />
             </div>
           ))}

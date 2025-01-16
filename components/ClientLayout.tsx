@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 export default function ClientLayout({
   children,

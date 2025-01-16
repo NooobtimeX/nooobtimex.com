@@ -1,7 +1,7 @@
 "use client";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navigation = [
@@ -12,7 +12,6 @@ const navigation = [
 
 export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   const handleMenuToggle = () => {
     setMobileMenuOpen((prev) => !prev);
@@ -24,10 +23,12 @@ export default function Header() {
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
           <Link href="/">
-            <img
+            <Image
               src="/favicon.ico"
               alt="Portfolio"
-              className="h-10 w-10 rounded-full"
+              className="rounded-full"
+              width={40}
+              height={40}
             />
           </Link>
           <em className="text-xl font-bold">PORTFOLIO</em>

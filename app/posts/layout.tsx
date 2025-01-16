@@ -1,4 +1,5 @@
 import type { Metadata } from "next"; // Import Metadata type
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Portfolio | Posts | Wongsaphat Puangsorn",

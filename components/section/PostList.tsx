@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 interface Post {
   slug: string;
@@ -19,7 +21,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
             <div className="card-body p-0">
               {/* Card Image */}
               <figure>
-                <img
+                <Image
                   src={post.Image}
                   alt={`Cover image for ${post.title}`}
                   className="rounded-2xl object-cover"

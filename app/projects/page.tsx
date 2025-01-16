@@ -1,6 +1,7 @@
 "use client";
 
 import Head from "next/head";
+import Image from "next/image";
 import { useState } from "react";
 import { IoFilterSharp } from "react-icons/io5";
 
@@ -155,10 +156,12 @@ export default function Project() {
             <div key={item.name} className="card bg-base-100 shadow-lg">
               <figure>
                 <a href={item.href} target="_blank" rel="noopener noreferrer">
-                  <img
+                  <Image
                     src={item.imgSrc}
                     alt={item.name}
                     className="w-full rounded-2xl object-cover"
+                    width={1600}
+                    height={900}
                   />
                 </a>
               </figure>
@@ -173,10 +176,12 @@ export default function Project() {
                         className="tooltip tooltip-primary"
                         data-tip={skillData.name}
                       >
-                        <img
+                        <Image
                           src={skillData.imgSrc}
                           alt={skillData.name}
-                          className="h-6 w-6 rounded-2xl bg-base-200"
+                          className="rounded-2xl bg-base-200"
+                          width={24}
+                          height={24}
                         />
                       </div>
                     ) : null;
@@ -204,10 +209,12 @@ export default function Project() {
                         : "badge-outline"
                     }`}
                   >
-                    <img
+                    <Image
                       src={skill.imgSrc}
                       alt={skill.name}
-                      className="h-5 w-5 mr-2"
+                      className="mr-2"
+                      width={20}
+                      height={20}
                     />
                     {skill.name}
                   </div>
