@@ -45,12 +45,17 @@ const SkillGroup = ({ title, skillList }: SkillGroupProps) => (
     </h2>
     <div className="flex flex-wrap justify-center gap-4">
       {skillList.map((skill, index) => (
-        <img
+        <div
           key={index}
-          src={skill.imgSrc}
-          alt={skill.name}
-          className="h-14 w-14 md:h-20 md:w-20 group rounded-2xl hover:shadow-lg hover:scale-105 transition-transform duration-300"
-        />
+          className="tooltip tooltip-primary"
+          data-tip={skill.name}
+        >
+          <img
+            src={skill.imgSrc}
+            alt={skill.name}
+            className="h-14 w-14 md:h-20 md:w-20 group rounded-2xl"
+          />
+        </div>
       ))}
     </div>
   </div>

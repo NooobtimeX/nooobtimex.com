@@ -49,12 +49,17 @@ export default function QRCodeProject() {
             <p className="text-center text-lg text-base-content">Skills</p>
             <div className="flex flex-wrap justify-center gap-4">
               {skills.map((skill, index) => (
-                <img
+                <div
                   key={index}
-                  src={skill.imgSrc}
-                  alt={skill.name}
-                  className="h-14 w-14 md:h-20 md:w-20 group rounded-2xl hover:shadow-lg hover:scale-105 transition-transform duration-300"
-                />
+                  className="tooltip tooltip-primary"
+                  data-tip={skill.name}
+                >
+                  <img
+                    src={skill.imgSrc}
+                    alt={skill.name}
+                    className="h-14 w-14 md:h-20 md:w-20 group rounded-2xl"
+                  />
+                </div>
               ))}
             </div>
           </div>

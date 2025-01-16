@@ -152,10 +152,7 @@ export default function Project() {
         {/* Project Cards */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredItems.map((item) => (
-            <div
-              key={item.name}
-              className="card bg-base-100 shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
-            >
+            <div key={item.name} className="card bg-base-100 shadow-lg">
               <figure>
                 <a href={item.href} target="_blank" rel="noopener noreferrer">
                   <img
@@ -167,9 +164,24 @@ export default function Project() {
               </figure>
               <div className="card-body">
                 <h2 className="card-title text-primary">{item.name}</h2>
-                <p className="text-sm text-neutral-content">
-                  {item.skills.join(", ")}
-                </p>
+                <div className="flex gap-2 flex-wrap">
+                  {item.skills.map((skill) => {
+                    const skillData = skills.find((s) => s.id === skill);
+                    return skillData ? (
+                      <div
+                        key={skillData.id}
+                        className="tooltip tooltip-primary"
+                        data-tip={skillData.name}
+                      >
+                        <img
+                          src={skillData.imgSrc}
+                          alt={skillData.name}
+                          className="h-6 w-6 rounded-2xl bg-base-200"
+                        />
+                      </div>
+                    ) : null;
+                  })}
+                </div>
               </div>
             </div>
           ))}
