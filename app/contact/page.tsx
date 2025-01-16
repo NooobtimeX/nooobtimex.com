@@ -1,26 +1,19 @@
 import Head from "next/head";
-import { FaDiscord } from "react-icons/fa";
-import { MdEmail, MdFacebook, MdPhone } from "react-icons/md";
-
+import {
+  FaDiscord,
+  FaEnvelope,
+  FaFacebook,
+  FaLine,
+  FaLinkedin,
+  FaPhone,
+} from "react-icons/fa";
 export default function Contact() {
   const contactDetails = [
-    {
-      title: "Mail",
-      detail: "nooobtimex@gmail.com",
-      link: "mailto:nooobtimex@gmail.com",
-      icon: MdEmail,
-    },
-    {
-      title: "Phone number",
-      detail: "+66 85 587 7024",
-      link: "tel:+66855877024",
-      icon: MdPhone,
-    },
     {
       title: "Facebook",
       detail: "Woongsaphat Puangsorn",
       link: "https://www.facebook.com/xnooobtime",
-      icon: MdFacebook,
+      icon: FaFacebook,
       recommend: true,
     },
     {
@@ -28,6 +21,30 @@ export default function Contact() {
       detail: "NooobtimeX",
       icon: FaDiscord,
       recommend: true,
+    },
+    {
+      title: "Mail",
+      detail: "nooobtimex@gmail.com",
+      link: "mailto:nooobtimex@gmail.com",
+      icon: FaEnvelope,
+    },
+    {
+      title: "Phone number",
+      detail: "+66 85 587 7024",
+      link: "tel:+66855877024",
+      icon: FaPhone,
+    },
+    {
+      title: "Line",
+      detail: "@nooobtimex",
+      link: "https://line.me/ti/p/@nooobtimex",
+      icon: FaLine,
+    },
+    {
+      title: "LinkedIn",
+      detail: "Wongsaphat Puangsorn",
+      link: "https://www.linkedin.com/in/nooobtimex/",
+      icon: FaLinkedin,
     },
   ];
 
@@ -42,10 +59,7 @@ export default function Contact() {
         </h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {contactDetails.map((detail, index) => (
-            <div
-              key={index}
-              className="card bg-base-100 shadow-xl p-6 hover:shadow-2xl transition-shadow"
-            >
+            <div key={index} className="card bg-base-100 shadow-xl p-6">
               <div className="flex items-center gap-4">
                 <detail.icon size={32} className="text-primary" />
                 <h2 className="text-2xl font-semibold text-primary">
