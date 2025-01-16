@@ -18,8 +18,18 @@ export default function HeroSection() {
               </button>
             </Link>
             <Link href="/skills">
-              <button className="btn btn-secondary px-6 py-3 font-medium">
+              <button className="btn btn-primary px-6 py-3 font-medium">
                 VIEW SKILLS
+              </button>
+            </Link>
+          </div>
+          <div className="mt-4 flex justify-center space-x-4">
+            <Link
+              href="https://firebasestorage.googleapis.com/v0/b/portfolio-84dbc.firebasestorage.app/o/CV_Wongsaphat_Puangsorn.pdf?alt=media&token=bc279fdc-80e4-40b1-8969-b61d3397cde2"
+              download="CV_Wongsaphat_Puangsorn.pdf"
+            >
+              <button className="btn btn-secondary  btn-outline px-6 py-3 font-medium">
+                Download CV
               </button>
             </Link>
           </div>
