@@ -14,10 +14,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
     <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
       {posts.map((post) => (
-        <div
-          className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300"
-          key={post.slug}
-        >
+        <div className="card bg-base-100 shadow-xl" key={post.slug}>
           <Link href={`/posts/${post.slug}`} className="block">
             <div className="card-body p-0">
               {/* Card Image */}
