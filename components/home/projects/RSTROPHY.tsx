@@ -2,19 +2,26 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  SiGoogleads,
+  SiGoogleanalytics,
+  SiGoogletagmanager,
+  SiWoo,
+  SiWordpress,
+} from "react-icons/si";
 
 export default function Combomaker() {
   const skills = [
-    { imgSrc: "/icon/wordpress.png", name: "WordPress" },
-    { imgSrc: "/icon/woocommerce.png", name: "WooCommerce" },
-    { imgSrc: "/icon/googleads.png", name: "Google Ads" },
-    { imgSrc: "/icon/googletagmanager.png", name: "Google Tagmanager" },
-    { imgSrc: "/icon/googleanalytics.png", name: "Google Analytics" },
+    { name: "WordPress", Icon: SiWordpress },
+    { name: "WooCommerce", Icon: SiWoo },
+    { name: "Google Ads", Icon: SiGoogleads },
+    { name: "Google Tag Manager", Icon: SiGoogletagmanager },
+    { name: "Google Analytics", Icon: SiGoogleanalytics },
   ];
 
   return (
     <div className="p-4">
-      {/* Combo Maker Section */}
+      {/* RS TROPHY Section */}
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
         {/* Skills Section */}
         <div className="space-y-6 m-auto">
@@ -23,20 +30,16 @@ export default function Combomaker() {
           </h3>
           <div>
             <p className="text-center text-lg text-base-content">Skills</p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mt-4">
               {skills.map((skill, index) => (
                 <div
                   key={index}
                   className="tooltip tooltip-primary"
                   data-tip={skill.name}
                 >
-                  <Image
-                    src={skill.imgSrc}
-                    alt={skill.name}
-                    className="md:h-20 md:w-20 group rounded-2xl"
-                    width={80}
-                    height={80}
-                  />
+                  <div className="flex items-center justify-center p-4 md:h-20 md:w-20">
+                    <skill.Icon className="h-12 w-12 text-primary" />
+                  </div>
                 </div>
               ))}
             </div>

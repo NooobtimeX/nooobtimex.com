@@ -2,14 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  SiFirebase,
+  SiJavascript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 export default function Combomaker() {
   const skills = [
-    { imgSrc: "/icon/nextjs.png", name: "NEXT JS" },
-    { imgSrc: "/icon/tailwindcss.png", name: "Tailwind CSS" },
-    { imgSrc: "/icon/javascript.png", name: "Javascript" },
-    { imgSrc: "/icon/typescript.png", name: "Typescript" },
-    { imgSrc: "/icon/firebase.png", name: "FIREBASE" },
+    { Icon: SiNextdotjs, name: "NEXT JS" },
+    { Icon: SiTailwindcss, name: "Tailwind CSS" },
+    { Icon: SiJavascript, name: "Javascript" },
+    { Icon: SiTypescript, name: "Typescript" },
+    { Icon: SiFirebase, name: "FIREBASE" },
   ];
 
   return (
@@ -30,13 +37,9 @@ export default function Combomaker() {
                   className="tooltip tooltip-primary"
                   data-tip={skill.name}
                 >
-                  <Image
-                    src={skill.imgSrc}
-                    alt={skill.name}
-                    className="md:h-20 md:w-20 group rounded-2xl dow-lg"
-                    width={80}
-                    height={80}
-                  />
+                  <div className="flex items-center justify-center p-4 md:h-20 md:w-20">
+                    <skill.Icon className="h-12 w-12 text-primary" />
+                  </div>
                 </div>
               ))}
             </div>

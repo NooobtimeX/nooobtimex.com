@@ -2,14 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  SiFirebase,
+  SiJavascript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 export default function HoyoSmash() {
   const skills = [
-    { name: "NEXT JS", imgSrc: "/icon/nextjs.png" },
-    { name: "Tailwind CSS", imgSrc: "/icon/tailwindcss.png" },
-    { name: "Javascript", imgSrc: "/icon/javascript.png" },
-    { name: "Typescript", imgSrc: "/icon/typescript.png" },
-    { name: "FIREBASE", imgSrc: "/icon/firebase.png" },
+    { name: "NEXT JS", Icon: SiNextdotjs },
+    { name: "Tailwind CSS", Icon: SiTailwindcss },
+    { name: "Javascript", Icon: SiJavascript },
+    { name: "Typescript", Icon: SiTypescript },
+    { name: "FIREBASE", Icon: SiFirebase },
   ];
 
   return (
@@ -17,7 +24,7 @@ export default function HoyoSmash() {
       {/* HoyoSmash Section */}
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
         {/* Image Section */}
-        <div className="order-2 md:order-1 m-auto">
+        <div className="order-2 m-auto md:order-1">
           <div className="card w-full bg-base-100 shadow-xl">
             <figure className="group relative">
               <Link
@@ -28,7 +35,7 @@ export default function HoyoSmash() {
                 <Image
                   src="/project/HoYoSmash.png"
                   alt="HoyoSmash"
-                  className="w-full "
+                  className="w-full"
                   width={1600}
                   height={900}
                 />
@@ -53,13 +60,9 @@ export default function HoyoSmash() {
                 className="tooltip tooltip-primary"
                 data-tip={skill.name}
               >
-                <Image
-                  src={skill.imgSrc}
-                  alt={skill.name}
-                  className="md:h-20 md:w-20 group rounded-2xl"
-                  width={80}
-                  height={80}
-                />
+                <div className="flex items-center justify-center p-4 md:h-20 md:w-20">
+                  <skill.Icon className="h-12 w-12 text-primary" />
+                </div>
               </div>
             ))}
           </div>

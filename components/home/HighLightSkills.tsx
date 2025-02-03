@@ -1,21 +1,39 @@
-import Image from "next/image";
+"use client";
+
+import {
+  SiDrizzle,
+  SiFirebase,
+  SiJavascript,
+  SiMysql,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiReact,
+  SiSqlite,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVercel,
+  SiVuedotjs,
+} from "react-icons/si";
 
 const skills = [
-  { imgSrc: "/icon/nextjs.png", name: "Next.js" },
-  { imgSrc: "/icon/nuxtjs.png", name: "Nuxt.js" },
-  { imgSrc: "/icon/react.png", name: "React" },
-  { imgSrc: "/icon/vuejs.png", name: "Vue.js" },
-  { imgSrc: "/icon/tailwindcss.png", name: "Tailwind CSS" },
-  { imgSrc: "/icon/prisma.png", name: "Prisma" },
-  { imgSrc: "/icon/drizzle.png", name: "Drizzle" },
-  { imgSrc: "/icon/sqlite.png", name: "SQLite" },
-  { imgSrc: "/icon/postgresql.png", name: "PostgreSQL" },
-  { imgSrc: "/icon/mysql.png", name: "MySQL" },
-  { imgSrc: "/icon/vercel.png", name: "Vercel" },
-  { imgSrc: "/icon/firebase.png", name: "Firebase" },
-  { imgSrc: "/icon/supabase.png", name: "Supabase" },
-  { imgSrc: "/icon/javascript.png", name: "JavaScript" },
-  { imgSrc: "/icon/typescript.png", name: "TypeScript" },
+  { name: "Next.js", Icon: SiNextdotjs },
+  { name: "Nuxt.js", Icon: SiNuxtdotjs },
+  { name: "React", Icon: SiReact },
+  { name: "Vue.js", Icon: SiVuedotjs },
+  { name: "Tailwind CSS", Icon: SiTailwindcss },
+  { name: "Prisma", Icon: SiPrisma },
+  { name: "Drizzle", Icon: SiDrizzle },
+  { name: "SQLite", Icon: SiSqlite },
+  { name: "PostgreSQL", Icon: SiPostgresql },
+  { name: "MySQL", Icon: SiMysql },
+  { name: "Vercel", Icon: SiVercel },
+  { name: "Firebase", Icon: SiFirebase },
+  { name: "Supabase", Icon: SiSupabase },
+  { name: "JavaScript", Icon: SiJavascript },
+  { name: "TypeScript", Icon: SiTypescript },
 ];
 
 export default function Skill() {
@@ -33,13 +51,9 @@ export default function Skill() {
               className="tooltip tooltip-primary"
               data-tip={skill.name}
             >
-              <Image
-                src={skill.imgSrc}
-                alt={skill.name}
-                className="md:h-20 md:w-20 group rounded-2xl dow-lg"
-                width={80}
-                height={80}
-              />
+              <div className="flex items-center justify-center p-4 md:h-20 md:w-20">
+                <skill.Icon className="h-12 w-12 text-primary" />
+              </div>
             </div>
           ))}
         </div>

@@ -1,37 +1,57 @@
+"use client";
+
 import Head from "next/head";
-import Image from "next/image";
+import {
+  SiBootstrap,
+  SiDaisyui,
+  SiDrizzle,
+  SiFirebase,
+  SiJavascript,
+  SiMysql,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiReact,
+  SiSqlite,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVercel,
+  SiVuedotjs,
+} from "react-icons/si";
 
 const skills = {
   Frontend: [
-    { imgSrc: "/icon/nextjs.png", name: "Next.js" },
-    { imgSrc: "/icon/nuxtjs.png", name: "Nuxt.js" },
-    { imgSrc: "/icon/react.png", name: "React" },
-    { imgSrc: "/icon/vuejs.png", name: "Vue.js" },
-    { imgSrc: "/icon/tailwindcss.png", name: "Tailwind CSS" },
-    { imgSrc: "/icon/bootstrap.png", name: "Bootstrap" },
-    { imgSrc: "/icon/daisyui.png", name: "DaisyUI" },
+    { name: "Next.js", Icon: SiNextdotjs },
+    { name: "Nuxt.js", Icon: SiNuxtdotjs },
+    { name: "React", Icon: SiReact },
+    { name: "Vue.js", Icon: SiVuedotjs },
+    { name: "Tailwind CSS", Icon: SiTailwindcss },
+    { name: "Bootstrap", Icon: SiBootstrap },
+    { name: "DaisyUI", Icon: SiDaisyui },
   ],
   Backend: [
-    { imgSrc: "/icon/prisma.png", name: "Prisma" },
-    { imgSrc: "/icon/drizzle.png", name: "Drizzle" },
-    { imgSrc: "/icon/sqlite.png", name: "SQLite" },
-    { imgSrc: "/icon/postgresql.png", name: "PostgreSQL" },
-    { imgSrc: "/icon/mysql.png", name: "MySQL" },
+    { name: "Prisma", Icon: SiPrisma },
+    { name: "Drizzle", Icon: SiDrizzle },
+    { name: "SQLite", Icon: SiSqlite },
+    { name: "PostgreSQL", Icon: SiPostgresql },
+    { name: "MySQL", Icon: SiMysql },
   ],
   Deployment: [
-    { imgSrc: "/icon/vercel.png", name: "Vercel" },
-    { imgSrc: "/icon/firebase.png", name: "Firebase" },
-    { imgSrc: "/icon/supabase.png", name: "Supabase" },
+    { name: "Vercel", Icon: SiVercel },
+    { name: "Firebase", Icon: SiFirebase },
+    { name: "Supabase", Icon: SiSupabase },
   ],
   Programming: [
-    { imgSrc: "/icon/javascript.png", name: "Javascript" },
-    { imgSrc: "/icon/typescript.png", name: "Typescript" },
+    { name: "Javascript", Icon: SiJavascript },
+    { name: "Typescript", Icon: SiTypescript },
   ],
 };
 
 interface Skill {
-  imgSrc: string;
   name: string;
+  Icon: React.ComponentType<{ className?: string }>;
 }
 
 interface SkillGroupProps {
@@ -48,16 +68,10 @@ const SkillGroup = ({ title, skillList }: SkillGroupProps) => (
       {skillList.map((skill, index) => (
         <div
           key={index}
-          className="tooltip tooltip-primary"
+          className="tooltip tooltip-primary flex items-center justify-center rounded-2xl"
           data-tip={skill.name}
         >
-          <Image
-            src={skill.imgSrc}
-            alt={skill.name}
-            className="md:h-20 md:w-20 group rounded-2xl"
-            width={80}
-            height={80}
-          />
+          <skill.Icon className="h-12 w-12 text-primary" />
         </div>
       ))}
     </div>

@@ -4,39 +4,45 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { IoFilterSharp } from "react-icons/io5";
+import {
+  SiDaisyui,
+  SiFirebase,
+  SiGoogleads,
+  SiGoogleanalytics,
+  SiGoogletagmanager,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiSupabase,
+  SiTailwindcss,
+  SiVercel,
+  SiWoocommerce,
+  SiWordpress,
+} from "react-icons/si";
 
 export default function Project() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   const skills = [
-    { name: "NEXT JS", id: "NEXT JS", imgSrc: "/icon/nextjs.png" },
-    { name: "FIREBASE", id: "FIREBASE", imgSrc: "/icon/firebase.png" },
-    {
-      name: "TAILWIND CSS",
-      id: "TAILWIND CSS",
-      imgSrc: "/icon/tailwindcss.png",
-    },
-    {
-      name: "DAISY UI",
-      id: "DAISY UI",
-      imgSrc: "/icon/daisyui.png",
-    },
-    { name: "NUXT JS", id: "NUXT JS", imgSrc: "/icon/nuxtjs.png" },
-    { name: "VERCEL", id: "VERCEL", imgSrc: "/icon/vercel.png" },
-    { name: "SUPABASE", id: "SUPABASE", imgSrc: "/icon/supabase.png" },
-    { name: "WORDPRESS", id: "WORDPRESS", imgSrc: "/icon/wordpress.png" },
-    { name: "WOOCOMMERCE", id: "WOOCOMMERCE", imgSrc: "/icon/woocommerce.png" },
-    { name: "Google Ads", id: "Google Ads", imgSrc: "/icon/googleads.png" },
+    { name: "NEXT JS", id: "NEXT JS", Icon: SiNextdotjs },
+    { name: "FIREBASE", id: "FIREBASE", Icon: SiFirebase },
+    { name: "TAILWIND CSS", id: "TAILWIND CSS", Icon: SiTailwindcss },
+    { name: "DAISY UI", id: "DAISY UI", Icon: SiDaisyui },
+    { name: "NUXT JS", id: "NUXT JS", Icon: SiNuxtdotjs },
+    { name: "VERCEL", id: "VERCEL", Icon: SiVercel },
+    { name: "SUPABASE", id: "SUPABASE", Icon: SiSupabase },
+    { name: "WORDPRESS", id: "WORDPRESS", Icon: SiWordpress },
+    { name: "WOOCOMMERCE", id: "WOOCOMMERCE", Icon: SiWoocommerce },
+    { name: "Google Ads", id: "Google Ads", Icon: SiGoogleads },
     {
       name: "Google Tagmanager",
       id: "Google Tagmanager",
-      imgSrc: "/icon/googletagmanager.png",
+      Icon: SiGoogletagmanager,
     },
     {
       name: "Google Analytics",
       id: "Google Analytics",
-      imgSrc: "/icon/googleanalytics.png",
+      Icon: SiGoogleanalytics,
     },
   ];
 
@@ -44,7 +50,7 @@ export default function Project() {
     {
       href: "https://nooobtimex.me/",
       imgSrc: "/project/Portfolio.png",
-      name: "Porfolio",
+      name: "Portfolio",
       skills: ["NEXT JS", "FIREBASE", "TAILWIND CSS", "DAISY UI"],
     },
     {
@@ -56,7 +62,6 @@ export default function Project() {
     {
       href: "https://combomaker.net/",
       imgSrc: "/project/ComboMaker.png",
-
       name: "Combo Maker",
       skills: ["NEXT JS", "FIREBASE", "TAILWIND CSS"],
     },
@@ -141,6 +146,7 @@ export default function Project() {
         <h1 className="text-center text-4xl font-bold text-primary mb-8">
           PROJECTS
         </h1>
+
         {/* Filter Button */}
         <div
           className="fixed bottom-4 left-1/2 transform -translate-x-1/2 aspect-square rounded-full w-full max-h-10 max-w-52 bg-primary text-white p-4 shadow-lg hover:bg-primary-focus focus:ring-4 focus:ring-primary/50 z-50 flex items-center justify-center transition-all duration-200"
@@ -173,16 +179,10 @@ export default function Project() {
                     return skillData ? (
                       <div
                         key={skillData.id}
-                        className="tooltip tooltip-primary"
+                        className="tooltip tooltip-primary flex items-center justify-center p-2"
                         data-tip={skillData.name}
                       >
-                        <Image
-                          src={skillData.imgSrc}
-                          alt={skillData.name}
-                          className="rounded-2xl bg-base-200"
-                          width={24}
-                          height={24}
-                        />
+                        <skillData.Icon className="h-6 w-6 text-primary" />
                       </div>
                     ) : null;
                   })}
@@ -191,6 +191,7 @@ export default function Project() {
             </div>
           ))}
         </div>
+
         {/* Filter Modal */}
         {isFilterOpen && (
           <div className="modal modal-open">
@@ -209,19 +210,13 @@ export default function Project() {
                         : "badge-outline"
                     }`}
                   >
-                    <Image
-                      src={skill.imgSrc}
-                      alt={skill.name}
-                      className="mr-2"
-                      width={20}
-                      height={20}
-                    />
+                    <skill.Icon className="mr-2" />
                     {skill.name}
                   </div>
                 ))}
               </div>
               <div className="modal-action">
-                <button className="btn btn- w-full" onClick={toggleFilter}>
+                <button className="btn w-full" onClick={toggleFilter}>
                   Close
                 </button>
               </div>

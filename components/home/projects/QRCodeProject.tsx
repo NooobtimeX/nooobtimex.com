@@ -2,17 +2,27 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  SiJavascript,
+  SiNuxtdotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+  SiVercel,
+} from "react-icons/si";
 
 export default function QRCodeProject() {
   const skills = [
-    { name: "Nuxt", imgSrc: "/icon/nuxtjs.png" },
-    { name: "Tailwind CSS", imgSrc: "/icon/tailwindcss.png" },
-    { name: "PostgreSQL", imgSrc: "/icon/postgresql.png" },
-    { name: "Prisma", imgSrc: "/icon/prisma.png" },
-    { name: "Javascript", imgSrc: "/icon/javascript.png" },
-    { name: "Typescript", imgSrc: "/icon/typescript.png" },
-    { name: "Vercel", imgSrc: "/icon/vercel.png" },
-    { name: "Supabase", imgSrc: "/icon/supabase.png" },
+    { name: "Nuxt", Icon: SiNuxtdotjs },
+    { name: "Tailwind CSS", Icon: SiTailwindcss },
+    { name: "PostgreSQL", Icon: SiPostgresql },
+    { name: "Prisma", Icon: SiPrisma },
+    { name: "Javascript", Icon: SiJavascript },
+    { name: "Typescript", Icon: SiTypescript },
+    { name: "Vercel", Icon: SiVercel },
+    { name: "Supabase", Icon: SiSupabase },
   ];
 
   return (
@@ -45,25 +55,21 @@ export default function QRCodeProject() {
 
         {/* Skills Section */}
         <div className="order-1 m-auto space-y-4 md:order-2">
-          <h3 className="text-center text-4xl font-bold text-primary m-auto">
+          <h3 className="text-center text-4xl font-bold text-primary">
             QR FOOD
           </h3>
           <div>
             <p className="text-center text-lg text-base-content">Skills</p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mt-4">
               {skills.map((skill, index) => (
                 <div
                   key={index}
                   className="tooltip tooltip-primary"
                   data-tip={skill.name}
                 >
-                  <Image
-                    src={skill.imgSrc}
-                    alt={skill.name}
-                    className="md:h-20 md:w-20 group rounded-2xl"
-                    width={80}
-                    height={80}
-                  />
+                  <div className="flex items-center justify-center p-4 md:h-20 md:w-20">
+                    <skill.Icon className="h-12 w-12 text-primary" />
+                  </div>
                 </div>
               ))}
             </div>
